@@ -1,0 +1,17 @@
+coverage_service: cobertura_xml
+workspace: viaopta.xcworkspace
+xcodeproj: viaopta.xcodeproj
+scheme: viaopta-develop
+ignore:
+  - Pods/*
+  - R.generated.swift
+  - "*/AppDelegate.swift"
+  - "*/Session.swift"
+  - "*/Extensions/*"
+  - "*/Helpers/*"
+  - "*/Manager/*"
+  - "*/Navigators/*"
+  - "*/Networking/*"
+  - "*/Analytics/*"
+  - "*/*ViewController.swift"
+  - "*/*Routes.swift"

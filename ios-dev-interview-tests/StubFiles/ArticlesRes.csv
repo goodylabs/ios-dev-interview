@@ -1,0 +1,78 @@
+language;condition_id;glossary_id;app_section_id;type;value;meta
+en;namd;;;HEADER;Age-Related Macular Degeneration;
+en;namd;;;CONTENT;Lorem ipsum dolor sit amet cons ectetur adipiscing elit. Morbi dui sapien egestas sit amet diam ut <a>ultrices auctor nibh</a>. Aliquam ornare urna ut fringilla ornare curabitur elempentum vestibulum tortor.<br/> Donec bibendum enim elit gravida amet aliquet libero egestas. Curab mattis fringilla vulputate nam at est vitae justo venenatis malesuada.;
+en;namd;;;IMAGE_URL;https://firebasestorage.googleapis.com/v0/b/flipside-ios-dev-interview.appspot.com/o/articles%2Feye.png?alt=media;
+en;namd;;;IMAGE_LABEL;Media caption lorem ipsum dolor amet consectetur adipiscing ultricies lobortis;
+en;namd;;;HEADER;Sub-header written over two lines;
+en;namd;;;CONTENT;Suspendisse vitae purus ullamcorper risus accumsan magna. Fusce luctus sed mi quis dapibus nullam porta maximus nisi vivamus ultrices scelerisque risus ut gravida magna gravida. Suspendisse potenti donec mattis pretium porta blandit risus tincidunt quam pretium quis egestas ligula auctor fringilla.;
+en;namd;;;HEADER;Additional related content links;
+en;namd;;;LINK;Lorem ipsum dolor sit amet consectetur adipiscing;https://lipsum.com
+en;namd;;;LINK;Phasellus efficitur pellent urna quam commodo;https://lipsum.com
+en;namd;;;LINK;Fusce imperdiet quis sapien non gravida;https://lipsum.com
+en;namd;;;LINK;Phasellus vel dignissim lorem in semper lacinia;https://lipsum.com
+en;;bendardum;;HEADER;Primary header over two lines;
+en;;bendardum;;CONTENT;Lorem ipsum dolor sit amet cons ectetur adipiscing elit. Morbi dui sapien egestas sit amet diam ut <a>ultrices auctor nibh</a>. Aliquam ornare urna ut fringilla ornare curabitur elempentum vestibulum tortor.<br/> Donec bibendum enim elit gravida amet aliquet libero egestas. Curab mattis fringilla vulputate nam at est vitae justo venenatis malesuada.;
+en;;bendardum;;HEADER;Additional related content links;
+en;;bendardum;;LINK;Lorem ipsum dolor sit amet consectetur adipiscing;https://lipsum.com
+en;;bendardum;;LINK;Phasellus efficitur pellent urna quam commodo;https://lipsum.com
+en;;;conditions_overview;HEADER;Conditions overview;https://lipsum.com
+en;;;conditions_overview;CONTENT;Lorem ipsum dolor sit amet cons ectetur adipiscing elit. Morbi dui sapien egestas sit amet diam ut <a>ultrices auctor nibh</a>. Aliquam ornare urna ut fringilla ornare curabitur elempentum vestibulum tortor.<br/> Donec bibendum enim elit gravida amet aliquet libero egestas. Curab mattis fringilla vulputate nam at est vitae justo venenatis malesuada.;
+en;;;conditions_overview;HEADER;Additional related content links;
+en;;;conditions_overview;LINK;Lorem ipsum dolor sit amet consectetur adipiscing;
+en;;;support_information;HEADER;Support Information;
+en;;;support_information;CONTENT;Lorem ipsum dolor sit amet cons ectetur adipiscing elit. Morbi dui sapien egestas sit amet diam ut <a>ultrices auctor nibh</a>. Aliquam ornare urna ut fringilla ornare curabitur elempentum vestibulum tortor.<br/> Donec bibendum enim elit gravida amet aliquet libero egestas. Curab mattis fringilla vulputate nam at est vitae justo venenatis malesuada.;
+en;;;support_information;HEADER;Additional related content links;
+en;;;support_information;LINK;Lorem ipsum dolor sit amet consectetur adipiscing;
+en;;;support_information;LINK;Phasellus efficitur pellent urna quam commodo;
+en;;;terms_conditions;HEADER;Terms & Conditions;
+en;;;terms_conditions;CONTENT;Lorem ipsum dolor sit amet cons ectetur adipiscing elit. Morbi dui sapien egestas sit amet diam ut <a>ultrices auctor nibh</a>. Aliquam ornare urna ut fringilla ornare curabitur elempentum vestibulum tortor.<br/> Donec bibendum enim elit gravida amet aliquet libero egestas. Curab mattis fringilla vulputate nam at est vitae justo venenatis malesuada.;
+pl;namd;;;HEADER;Główny nagłówek w dwóch wierszach;
+pl;namd;;;CONTENT;Lorem ipsum dolor sit amet cons ectetur adipiscing elit. Morbi dui sapien egestas sit amet diam ut <a>ultrices auctor nibh</a>. Aliquam ornare urna ut fringilla ornare curabitur elempentum vestibulum tortor.<br/> Donec bibendum enim elit gravida amet aliquet libero egestas. Curab mattis fringilla vulputate nam at est vitae justo venenatis malesuada.;
+pl;namd;;;IMAGE_URL;https://firebasestorage.googleapis.com/v0/b/flipside-ios-dev-interview.appspot.com/o/articles%2Feye.png?alt=media;
+pl;namd;;;IMAGE_LABEL;Podpisy lorem ipsum dolor amet consectetur adipiscing ultricies lobortis;
+pl;namd;;;HEADER;Pod nagłówek napisany w dwóch wierszach;
+pl;namd;;;CONTENT;Suspendisse vitae purus ullamcorper risus accumsan magna. Fusce luctus sed mi quis dapibus nullam porta maximus nisi vivamus ultrices scelerisque risus ut gravida magna gravida. Suspendisse potenti donec mattis pretium porta blandit risus tincidunt quam pretium quis egestas ligula auctor fringilla.;
+pl;namd;;;HEADER;Dodatkowe powiązane linki treści;
+pl;namd;;;LINK;Lorem ipsum dolor sit amet consectetur adipiscing;https://lipsum.com
+pl;namd;;;LINK;Phasellus efficitur pellent urna quam commodo;https://lipsum.com
+pl;namd;;;LINK;Fusce imperdiet quis sapien non gravida;https://lipsum.com
+pl;namd;;;LINK;Phasellus vel dignissim lorem in semper lacinia;https://lipsum.com
+pl;;bendardum;;HEADER;Główny nagłówek w dwóch wierszach;
+pl;;bendardum;;CONTENT;Lorem ipsum dolor sit amet cons ectetur adipiscing elit. Morbi dui sapien egestas sit amet diam ut <a>ultrices auctor nibh</a>. Aliquam ornare urna ut fringilla ornare curabitur elempentum vestibulum tortor.<br/> Donec bibendum enim elit gravida amet aliquet libero egestas. Curab mattis fringilla vulputate nam at est vitae justo venenatis malesuada.;
+pl;;bendardum;;HEADER;Dodatkowe powiązane linki treści;
+pl;;bendardum;;LINK;Lorem ipsum dolor sit amet consectetur adipiscing;https://lipsum.com
+pl;;bendardum;;LINK;Phasellus efficitur pellent urna quam commodo;https://lipsum.com
+pl;;;conditions_overview;HEADER;Przegląd warunków;https://lipsum.com
+pl;;;conditions_overview;CONTENT;Lorem ipsum dolor sit amet cons ectetur adipiscing elit. Morbi dui sapien egestas sit amet diam ut <a>ultrices auctor nibh</a>. Aliquam ornare urna ut fringilla ornare curabitur elempentum vestibulum tortor.<br/> Donec bibendum enim elit gravida amet aliquet libero egestas. Curab mattis fringilla vulputate nam at est vitae justo venenatis malesuada.;
+pl;;;conditions_overview;HEADER;Additional related content links;
+pl;;;conditions_overview;LINK;Lorem ipsum dolor sit amet consectetur adipiscing;
+pl;;;support_information;HEADER;Informacje o pomocy technicznej;
+pl;;;support_information;CONTENT;Lorem ipsum dolor sit amet cons ectetur adipiscing elit. Morbi dui sapien egestas sit amet diam ut <a>ultrices auctor nibh</a>. Aliquam ornare urna ut fringilla ornare curabitur elempentum vestibulum tortor.<br/> Donec bibendum enim elit gravida amet aliquet libero egestas. Curab mattis fringilla vulputate nam at est vitae justo venenatis malesuada.;
+pl;;;support_information;HEADER;Dodatkowe powiązane linki treści;
+pl;;;support_information;LINK;Lorem ipsum dolor sit amet consectetur adipiscing;
+pl;;;support_information;LINK;Phasellus efficitur pellent urna quam commodo;
+pl;;;terms_conditions;HEADER;Zasady i Warunki;
+pl;;;terms_conditions;CONTENT;Lorem ipsum dolor sit amet cons ectetur adipiscing elit. Morbi dui sapien egestas sit amet diam ut <a>ultrices auctor nibh</a>. Aliquam ornare urna ut fringilla ornare curabitur elempentum vestibulum tortor.<br/> Donec bibendum enim elit gravida amet aliquet libero egestas. Curab mattis fringilla vulputate nam at est vitae justo venenatis malesuada.;
+en;dme;;;HEADER;Diabetic Macular Edema;
+en;brvo;;;HEADER;Branch Retinal Vein Occlusion;
+en;crvo;;;HEADER;Central Retinal Vein Occlusion;
+en;cnv;;;HEADER;Myopic Choroidal Neovascularization;
+en;vmt;;;HEADER;Vitreomacular Traction;
+en;diabetic_retinopathy;;;HEADER;Diabetic Retinopathy;
+en;glaucoma;;;HEADER;Glaucoma;
+en;cataracts;;;HEADER;Cataracts;
+en;retinitis_pigmentosa;;;HEADER;Retinitis Pigmentosa;
+en;dry_eye;;;HEADER;Dry Eye;
+en;presbyopia;;;HEADER;Presbyopia;
+pl;namd;;;HEADER;Zwyrodnienie plamki żółtej;
+pl;dme;;;HEADER;Cukrzycowy obrzęk plamki żółtej;
+pl;brvo;;;HEADER;Okluzja żyły siatkówki;
+pl;crvo;;;HEADER;Okluzja żyły środkowej siatkówki;
+pl;cnv;;;HEADER;Neowaskularyzacja choroidalna;
+pl;vmt;;;HEADER;Trakcja szklistkowo-siatkówkowa;
+pl;diabetic_retinopathy;;;HEADER;Retinopatia cukrzycowa;
+pl;glaucoma;;;HEADER;Jaskra;
+pl;cataracts;;;HEADER;Zaćma;
+pl;retinitis_pigmentosa;;;HEADER;Barwnikowe zwyrodnienie siatkówki;
+pl;dry_eye;;;HEADER;Zespół suchego oka;
+pl;presbyopia;;;HEADER;Dalekowzroczność starcza;

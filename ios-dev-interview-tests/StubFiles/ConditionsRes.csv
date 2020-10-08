@@ -1,0 +1,25 @@
+language;condition_id;name;abbraviation
+en;namd;Age-Related Macular Degeneration;nAMD
+en;dme;Diabetic Macular Edema;DME
+en;brvo;Branch Retinal Vein Occlusion;BRVO
+en;crvo;Central Retinal Vein Occlusion;CRVO
+en;cnv;Myopic Choroidal Neovascularization;CNV
+en;vmt;Vitreomacular Traction;VMT
+en;diabetic_retinopathy;Diabetic Retinopathy;
+en;glaucoma;Glaucoma;
+en;cataracts;Cataracts;
+en;retinitis_pigmentosa;Retinitis Pigmentosa;
+en;dry_eye;Dry Eye;
+en;presbyopia;Presbyopia;
+pl;namd;Zwyrodnienie plamki żółtej;nAMD
+pl;dme;Cukrzycowy obrzęk plamki żółtej;DME
+pl;brvo;Okluzja żyły siatkówki;BRVO
+pl;crvo;Okluzja żyły środkowej siatkówki;CRVO
+pl;cnv;Neowaskularyzacja choroidalna;CNV
+pl;vmt;Trakcja szklistkowo-siatkówkowa;VMT
+pl;diabetic_retinopathy;Retinopatia cukrzycowa;
+pl;glaucoma;Jaskra;
+pl;cataracts;Zaćma;
+pl;retinitis_pigmentosa;Barwnikowe zwyrodnienie siatkówki;
+pl;dry_eye;Zespół suchego oka;
+pl;presbyopia;Dalekowzroczność starcza;
