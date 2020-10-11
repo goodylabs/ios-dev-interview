@@ -1,11 +1,11 @@
 PODS:
   - Alamofire (5.2.2)
-  - KIF (3.7.9):
-    - KIF/Core (= 3.7.9)
-  - KIF/Core (3.7.9)
-  - Kingfisher (5.14.1):
-    - Kingfisher/Core (= 5.14.1)
-  - Kingfisher/Core (5.14.1)
+  - KIF (3.7.11):
+    - KIF/Core (= 3.7.11)
+  - KIF/Core (3.7.11)
+  - Kingfisher (5.15.5):
+    - Kingfisher/Core (= 5.15.5)
+  - Kingfisher/Core (5.15.5)
   - Localize-Swift (2.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
@@ -96,8 +96,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
-  KIF: 350f96fb4205972a10e4c1a45774d48b2d8482d8
-  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
+  KIF: 927c502455cd746771c57e9b3a5123c67c7fa0b5
+  Kingfisher: e3ec347a5ab8817b7585ef46923a2d2b9a7d8fbe
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
@@ -112,4 +112,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 6247cb6411c9a6486ecf6672c9cb0f33c93e8ca6
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.8.4
