@@ -11,6 +11,7 @@ import Foundation
 
 struct CharacterResponse: Codable {
     var results: [Character]?
+    var info: Info?
 }
 
 struct Character: Codable {
@@ -20,4 +21,8 @@ struct Character: Codable {
     var species: String?
     var image: String?
     var gender: String?
+}
+
+struct Info: Codable {
+    var pages: Int?
 }

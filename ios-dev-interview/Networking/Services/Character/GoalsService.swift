@@ -13,6 +13,7 @@ import Moya
 protocol CharacterService {
     func getCharacters() -> Observable<CharacterResponse>
     func getCharacter(id: Int) -> Observable<Character>
+    func getCharactersNextPage(page: Int) -> Observable<CharacterResponse>
 }
 
 class CharacterServiceImpl: BaseApiService<GoalsResource>, CharacterService {
@@ -30,6 +31,13 @@ class CharacterServiceImpl: BaseApiService<GoalsResource>, CharacterService {
         return request(for: .getCharacter(id))
             .map {(item: Character, _ response: Response) in
                 return item
+        }
+    }
+    
+    func getCharactersNextPage(page: Int) -> Observable<CharacterResponse> {
+        return request(for: .nextPage(page))
+            .map {(items: CharacterResponse, _ response: Response) in
+                return items
         }
     }
 }

@@ -13,6 +13,7 @@ enum GoalsResource: TargetType {
     
     case getCharacters
     case getCharacter(Int)
+    case nextPage(Int)
     
     var path: String {
         switch self {
@@ -20,12 +21,14 @@ enum GoalsResource: TargetType {
             return "/character"
         case .getCharacter(let id):
             return "/character/\(id)"
+        case .nextPage:
+            return "/character"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getCharacters, .getCharacter:
+        case .getCharacters, .getCharacter, .nextPage:
             return .get
         }
     }
@@ -41,6 +44,9 @@ enum GoalsResource: TargetType {
             
         case .getCharacter:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+            
+        case .nextPage(let page):
+            return .requestParameters(parameters: ["page": page], encoding: URLEncoding.default)
         }
     }
     

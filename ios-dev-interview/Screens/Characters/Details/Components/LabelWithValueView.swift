@@ -34,6 +34,7 @@ class LabelWithValueView: UIView {
         valueLabel.textColor = ColorHelper.hexStringToUIColor(hex: "#71A2FF")
         valueLabel.font = UIFont(name: "Roboto-Bold", size: 18)
         valueLabel.textAlignment = .center
+        valueLabel.numberOfLines = 2
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         valueLabel.translatesAutoresizingMaskIntoConstraints = false

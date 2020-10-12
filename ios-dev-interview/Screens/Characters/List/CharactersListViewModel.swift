@@ -14,7 +14,10 @@ class CharactersListViewModel: BaseViewModel {
     
     private let service: CharacterService
     
-    let characters = BehaviorRelay<[Character]>(value: [])
+    var characters = BehaviorRelay<[Character]>(value: [])
+    var pages: Int = 0
+    var nextPage: Int = 2
+    var isFetchingNextPage: Bool = false
     
     init(service: CharacterService) {
         self.service = service
@@ -23,7 +26,22 @@ class CharactersListViewModel: BaseViewModel {
     func fetchCharacters() {
         service.getCharacters()
             .subscribe(onNext: { res in
-                self.characters.accept(res.results ?? [])
+                self.pages = res.info?.pages ?? 0
+                self.characters.accept(res.results ?? [])    
+            }, onError: { error in
+                print(error)
+            }).disposed(by: disposeBag)
+    }
+    
+    func fetchNextPage() {
+        service.getCharactersNextPage(page: nextPage)
+            .subscribe(onNext: { res in
+                var list = self.characters.value
+                list.append(contentsOf: res.results ?? [])
+                
+                self.characters.accept(list)
+                self.isFetchingNextPage = false
+                self.nextPage += 1
             }, onError: { error in
                 print(error)
             }).disposed(by: disposeBag)
@@ -65,6 +83,15 @@ extension CharactersListViewModel: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigateToDetails(characters.value[indexPath.row].id)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == characters.value.count - 3 {
+            if(!isFetchingNextPage) {
+                isFetchingNextPage = true
+                fetchNextPage()
+            }
+        }
     }
 }
 

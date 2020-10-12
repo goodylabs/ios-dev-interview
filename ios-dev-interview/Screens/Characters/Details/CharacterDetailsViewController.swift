@@ -97,9 +97,10 @@ class CharacterDetailsViewController: UIViewController {
             //
             spaciesLabelWithValueview.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 32),
             spaciesLabelWithValueview.leadingAnchor.constraint(equalTo: avatarLabelWithImageview.leadingAnchor),
+            spaciesLabelWithValueview.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -4),
             //
+            statusLabelWithValueview.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 32),
             statusLabelWithValueview.trailingAnchor.constraint(equalTo: avatarLabelWithImageview.trailingAnchor),
-            statusLabelWithValueview.centerYAnchor.constraint(equalTo: spaciesLabelWithValueview.centerYAnchor),
             //
             genderLabelWithImageview.topAnchor.constraint(equalTo: spaciesLabelWithValueview.bottomAnchor, constant: 32),
             genderLabelWithImageview.centerXAnchor.constraint(equalTo: view.centerXAnchor)
