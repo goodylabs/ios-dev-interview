@@ -19,4 +19,5 @@ struct Character: Codable {
     var status: String?
     var species: String?
     var image: String?
+    var gender: String?
 }

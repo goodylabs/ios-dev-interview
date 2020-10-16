@@ -44,6 +44,10 @@
 		CFF7533F25151D6100FBBAFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA84F21C776827009F64E4 /* LaunchScreen.storyboard */; };
 		CFF7535825151E2D00FBBAFD /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6BA090423A11D3E006B6509 /* Localization.strings */; };
 		CFF7535925151E3200FBBAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
+		FA576795253A43510016FD64 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA576794253A43510016FD64 /* DetailsViewController.swift */; };
+		FA576797253A437D0016FD64 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA576796253A437D0016FD64 /* DetailsViewModel.swift */; };
+		FA57679B253A440A0016FD64 /* UIFont + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA576798253A440A0016FD64 /* UIFont + Ext.swift */; };
+		FA57679C253A440A0016FD64 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA576799253A440A0016FD64 /* UIColor+Ext.swift */; };
 		FB0503193B4FCA550FEA275F /* Pods_ios_dev_interview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F0316A113B6400B46EA26F /* Pods_ios_dev_interview.framework */; };
 		FE4D635C22B2C75400685161 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D635B22B2C75400685161 /* Navigator.swift */; };
 		FE4D635E22B2CAFF00685161 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D635D22B2CAFF00685161 /* AppNavigator.swift */; };
@@ -110,6 +114,10 @@
 		CFB3EE5724F6FC0700BE1034 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		CFDC3443236984AB0020331A /* ios-dev-interview-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-dev-interview-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDC3447236984AB0020331A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA576794253A43510016FD64 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FA576796253A437D0016FD64 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		FA576798253A440A0016FD64 /* UIFont + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont + Ext.swift"; sourceTree = "<group>"; };
+		FA576799253A440A0016FD64 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		FE4D635B22B2C75400685161 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		FE4D635D22B2CAFF00685161 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		FE4D636322B2CDF700685161 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
@@ -233,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				CF028385252F3B5E008BCDF5 /* Components */,
+				FA576796253A437D0016FD64 /* DetailsViewModel.swift */,
+				FA576794253A43510016FD64 /* DetailsViewController.swift */,
 				CF028381252F323C008BCDF5 /* CharactersListViewController.swift */,
 				CF028383252F3252008BCDF5 /* CharactersListViewModel.swift */,
 			);
@@ -342,6 +352,8 @@
 		E8290BFC1D832D6400599960 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FA576799253A440A0016FD64 /* UIColor+Ext.swift */,
+				FA576798253A440A0016FD64 /* UIFont + Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -591,13 +603,17 @@
 				CF0EDCEE2361E58D000B6C4A /* TargetType+Base.swift in Sources */,
 				CF0EDCE12361E58D000B6C4A /* MultipartMedia.swift in Sources */,
 				CF0EDCDF2361E58D000B6C4A /* APIService.swift in Sources */,
+				FA576795253A43510016FD64 /* DetailsViewController.swift in Sources */,
 				9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */,
 				FE4D635C22B2C75400685161 /* Navigator.swift in Sources */,
+				FA57679B253A440A0016FD64 /* UIFont + Ext.swift in Sources */,
 				CF028387252F3B8C008BCDF5 /* CharacterCell.swift in Sources */,
 				CFB3EE4324F55AAE00BE1034 /* GoalsService.swift in Sources */,
 				FE4D635E22B2CAFF00685161 /* AppNavigator.swift in Sources */,
 				CFB3EE5824F6FC0700BE1034 /* BaseViewModel.swift in Sources */,
+				FA57679C253A440A0016FD64 /* UIColor+Ext.swift in Sources */,
 				CF92EF6B235C728B005B244A /* R.generated.swift in Sources */,
+				FA576797253A437D0016FD64 /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,7 +786,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZA2SRBY4DV;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GOOGLE_SERVICES_FILE = "GoogleService-Debug-Info";
 				INFOPLIST_FILE = "${PROJECT_BASE_NAME}/Info.plist";
@@ -808,7 +824,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QEF65KX8Z7;
+				DEVELOPMENT_TEAM = ZA2SRBY4DV;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GOOGLE_SERVICES_FILE = "GoogleService-Info";
 				INFOPLIST_FILE = "${PROJECT_BASE_NAME}/Info.plist";
@@ -842,7 +858,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = FTNWXU3YAB;
+				DEVELOPMENT_TEAM = ZA2SRBY4DV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ios-dev-interview-tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -860,7 +876,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PHE Drink Free Days.app/PHE Drink Free Days";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOS DEV INTERVIEW.app/IOS DEV INTERVIEW";
 			};
 			name = Debug;
 		};
@@ -877,7 +893,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = FTNWXU3YAB;
+				DEVELOPMENT_TEAM = ZA2SRBY4DV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ios-dev-interview-tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -893,7 +909,7 @@
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PHE Drink Free Days.app/PHE Drink Free Days";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOS DEV INTERVIEW.app/IOS DEV INTERVIEW";
 			};
 			name = Release;
 		};
