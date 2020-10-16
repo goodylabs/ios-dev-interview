@@ -8,9 +8,11 @@
 
 import UIKit
 import Kingfisher
+import RxSwift
 
 class CharacterCell: UITableViewCell {
     
+    let disposeBag = DisposeBag()
     let button = UIButton()
     let avatarView = UIImageView()
     let name = UILabel()
@@ -22,6 +24,11 @@ class CharacterCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
     }
     
     func setup(character: Character) {

@@ -53,7 +53,7 @@ extension CharactersListViewModel: UITableViewDataSource {
         }
         
         let item = characters.value[indexPath.row]
-        
+        //TODO FIX THIS BAD NAVIGATION! 
         cell.button.rx.controlEvent(.touchUpInside)
             .subscribe(onNext: { [weak self] _ in
                 self?.navigateToDetails(item.id)

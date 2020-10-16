@@ -78,7 +78,7 @@ DEPENDENCIES:
   - UICircularProgressRing
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Alamofire
     - KIF
     - Kingfisher
@@ -110,6 +110,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   UICircularProgressRing: 738b48db0ec1fbbd8482d727979392bb8c272e8d
 
-PODFILE CHECKSUM: 6247cb6411c9a6486ecf6672c9cb0f33c93e8ca6
+PODFILE CHECKSUM: 314db4172d7d1b4d04e7721cb816ba167d2fa76d
 
 COCOAPODS: 1.9.3
