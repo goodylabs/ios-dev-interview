@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  ios-dev-interview
+
+  Created by Kacper Wysocki on 18/10/2020.
+  Copyright © 2020 Flipside Group. All rights reserved.
+*/
+"BACK" = "Wróć";
+"CHARACTER_DETAILS_TITLE" = "Wybrany bohater to...";
+"AVATAR" = "Awatar:";
+"NAME" = "Nazwa:";
+"SPECIES" = "Gatunek:";
+"STATUS" = "Status:";
+"GENDER" = "Płeć:";

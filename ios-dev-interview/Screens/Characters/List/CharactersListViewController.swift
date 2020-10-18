@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
-
+import Localize_Swift
 class CharactersListViewController: UIViewController {
     
     var viewModel: CharactersListViewModel!
@@ -22,6 +22,11 @@ class CharactersListViewController: UIViewController {
         setupLayout()
         bindToViewModel()
         viewModel.fetchCharacters()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "BACK".localized(), style:.plain, target:nil, action:nil)
     }
     
     private func bindToViewModel() {
@@ -38,6 +43,8 @@ class CharactersListViewController: UIViewController {
         charactersTableView.translatesAutoresizingMaskIntoConstraints = false
         charactersTableView.delegate = viewModel
         charactersTableView.dataSource = viewModel
+        //
+        view.backgroundColor = .white
         view.addSubview(charactersTableView)
         //
         NSLayoutConstraint.activate([
@@ -47,6 +54,5 @@ class CharactersListViewController: UIViewController {
             charactersTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
-    
 }
 

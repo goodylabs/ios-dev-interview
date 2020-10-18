@@ -12,13 +12,14 @@ import RxSwift
 
 class CharacterCell: UITableViewCell {
     
-    let disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
     let button = UIButton()
     let avatarView = UIImageView()
     let name = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = .none
         setupViews()
     }
     
@@ -28,7 +29,7 @@ class CharacterCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
+        disposeBag = DisposeBag()
     }
     
     func setup(character: Character) {
@@ -44,9 +45,10 @@ class CharacterCell: UITableViewCell {
         avatarView.translatesAutoresizingMaskIntoConstraints = false
         name.translatesAutoresizingMaskIntoConstraints = false
         //
-        addSubview(avatarView)
-        addSubview(name)
-        addSubview(button)
+        
+        contentView.addSubview(avatarView)
+        contentView.addSubview(name)
+        contentView.addSubview(button)
         //
         NSLayoutConstraint.activate([
             avatarView.topAnchor.constraint(equalTo: topAnchor),

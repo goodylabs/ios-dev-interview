@@ -10,7 +10,6 @@
 		9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */; };
 		9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
 		9BFA84F31C776827009F64E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA84F21C776827009F64E4 /* LaunchScreen.storyboard */; };
-		A6BA090223A11D3E006B6509 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6BA090423A11D3E006B6509 /* Localization.strings */; };
 		A6D27A29240E9C1000A8D88F /* KIFExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D27A28240E9C1000A8D88F /* KIFExtensions.swift */; };
 		C6A0BFAA2510EF7F005968D4 /* BundleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0BFA92510EF7F005968D4 /* BundleService.swift */; };
 		C6D68A972510C1AE00D9007E /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D635D22B2CAFF00685161 /* AppNavigator.swift */; };
@@ -42,11 +41,12 @@
 		CFF7532F2514FF3800FBBAFD /* MultipartMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EDCCB2361E58D000B6C4A /* MultipartMedia.swift */; };
 		CFF7533D2514FF7900FBBAFD /* TargetType+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EDCDE2361E58D000B6C4A /* TargetType+Base.swift */; };
 		CFF7533F25151D6100FBBAFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA84F21C776827009F64E4 /* LaunchScreen.storyboard */; };
-		CFF7535825151E2D00FBBAFD /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6BA090423A11D3E006B6509 /* Localization.strings */; };
 		CFF7535925151E3200FBBAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
 		FB0503193B4FCA550FEA275F /* Pods_ios_dev_interview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F0316A113B6400B46EA26F /* Pods_ios_dev_interview.framework */; };
 		FC621396253A515B00305BB4 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC621395253A515B00305BB4 /* CharacterDetailsViewController.swift */; };
 		FC621398253A517E00305BB4 /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC621397253A517E00305BB4 /* CharacterDetailsViewModel.swift */; };
+		FCD9649D253C5CBD004D61ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCD9649F253C5CBD004D61ED /* Localizable.strings */; };
+		FCD964A2253C695C004D61ED /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD964A1253C695C004D61ED /* UIColor+Extension.swift */; };
 		FE4D635C22B2C75400685161 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D635B22B2C75400685161 /* Navigator.swift */; };
 		FE4D635E22B2CAFF00685161 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D635D22B2CAFF00685161 /* AppNavigator.swift */; };
 		FE4D636422B2CDF700685161 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D636322B2CDF700685161 /* ViewModelState.swift */; };
@@ -85,8 +85,6 @@
 		9B0C726D1C738D3400BAF3B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B5AFADA1C7205EC002347D6 /* IOS DEV INTERVIEW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS DEV INTERVIEW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFA84F21C776827009F64E4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A6BA090323A11D3E006B6509 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
-		A6BA090523A11D53006B6509 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localization.strings; sourceTree = "<group>"; };
 		A6D27A27240E9BAC00A8D88F /* ios-dev-interview-tests-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-dev-interview-tests-bridging-header.h"; sourceTree = "<group>"; };
 		A6D27A28240E9C1000A8D88F /* KIFExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIFExtensions.swift; sourceTree = "<group>"; };
 		BEAEDEC61DD1D0E4CEADABFB /* Pods-ios-dev-interview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-dev-interview.debug.xcconfig"; path = "Target Support Files/Pods-ios-dev-interview/Pods-ios-dev-interview.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +112,9 @@
 		CFDC3447236984AB0020331A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC621395253A515B00305BB4 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		FC621397253A517E00305BB4 /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
+		FCD9649E253C5CBD004D61ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FCD964A0253C5CC0004D61ED /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FCD964A1253C695C004D61ED /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FE4D635B22B2C75400685161 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		FE4D635D22B2CAFF00685161 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		FE4D636322B2CDF700685161 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
@@ -192,7 +193,7 @@
 		9B8D306720AB45160050697F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A6BA090423A11D3E006B6509 /* Localization.strings */,
+				FCD9649F253C5CBD004D61ED /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -339,6 +340,7 @@
 		E8290BFC1D832D6400599960 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FCD964A3253C7BD7004D61ED /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -350,6 +352,22 @@
 				FC621397253A517E00305BB4 /* CharacterDetailsViewModel.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		FCD964A3253C7BD7004D61ED /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				FCD964A4253C7BDD004D61ED /* UIColor */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		FCD964A4253C7BDD004D61ED /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				FCD964A1253C695C004D61ED /* UIColor+Extension.swift */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 		FE1800CC176E3937FB2BF792 /* Frameworks */ = {
@@ -461,10 +479,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF80AAA12371C3EA0029B269 /* Roboto-Medium.ttf in Resources */,
+				FCD9649D253C5CBD004D61ED /* Localizable.strings in Resources */,
 				9BFA84F31C776827009F64E4 /* LaunchScreen.storyboard in Resources */,
 				CF80AAA22371C3EA0029B269 /* Roboto-Bold.ttf in Resources */,
 				CF80AAA32371C3EA0029B269 /* Roboto-Light.ttf in Resources */,
-				A6BA090223A11D3E006B6509 /* Localization.strings in Resources */,
 				9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,7 +492,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF7533F25151D6100FBBAFD /* LaunchScreen.storyboard in Resources */,
-				CFF7535825151E2D00FBBAFD /* Localization.strings in Resources */,
 				CFF7535925151E3200FBBAFD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFB3EE4624F55AE600BE1034 /* GoalsResource.swift in Sources */,
+				FCD964A2253C695C004D61ED /* UIColor+Extension.swift in Sources */,
 				CF028384252F3252008BCDF5 /* CharactersListViewModel.swift in Sources */,
 				CF02837E252F31FA008BCDF5 /* CharactersRoutes.swift in Sources */,
 				FE4D636422B2CDF700685161 /* ViewModelState.swift in Sources */,
@@ -641,15 +659,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A6BA090423A11D3E006B6509 /* Localization.strings */ = {
+		FCD9649F253C5CBD004D61ED /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A6BA090323A11D3E006B6509 /* en */,
-				A6BA090523A11D53006B6509 /* pl */,
+				FCD9649E253C5CBD004D61ED /* en */,
+				FCD964A0253C5CC0004D61ED /* pl */,
 			);
-			name = Localization.strings;
-			path = "ios-dev-interview/Screens/Settings/SettingsMenu/Cells";
-			sourceTree = SOURCE_ROOT;
+			name = Localizable.strings;
+			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
@@ -778,7 +795,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T43Q58LJ63;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GOOGLE_SERVICES_FILE = "GoogleService-Debug-Info";
 				INFOPLIST_FILE = "${PROJECT_BASE_NAME}/Info.plist";
@@ -816,7 +833,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QEF65KX8Z7;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GOOGLE_SERVICES_FILE = "GoogleService-Info";
 				INFOPLIST_FILE = "${PROJECT_BASE_NAME}/Info.plist";

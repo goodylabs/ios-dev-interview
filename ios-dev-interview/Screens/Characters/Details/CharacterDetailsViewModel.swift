@@ -31,8 +31,4 @@ class CharacterDetailsViewModel: BaseViewModel {
                 print(error)
             }.disposed(by: disposeBag)
     }
-    
-    func popViewController() {
-        AppNavigator.shared.pop(animated: true)
-    }
 }
