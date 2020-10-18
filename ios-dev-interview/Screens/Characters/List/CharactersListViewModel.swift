@@ -38,18 +38,6 @@ class CharactersListViewModel: BaseViewModel {
             AppNavigator.shared.navigate(to: CharactersRoutes.details(id), with: .push)
         }
     }
-    
-    private func createSpinnerFooter(_ tableView: UITableView) -> UIView {
-        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50))
-        
-        let spinner = UIActivityIndicatorView()
-        spinner.center =  footerView.center
-        footerView.addSubview(spinner)
-        spinner.color = .black
-        spinner.startAnimating()
-        
-        return footerView
-    }
 }
 
 extension CharactersListViewModel: UITableViewDataSource {
@@ -81,8 +69,7 @@ extension CharactersListViewModel: UITableViewDataSource {
 
 extension CharactersListViewModel: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == characters.value.count-1 {
-            tableView.tableFooterView = createSpinnerFooter(tableView)
+        if indexPath.row == characters.value.count - 1 {
             currentPage += 1
             fetchCharacters(from: currentPage)
         }

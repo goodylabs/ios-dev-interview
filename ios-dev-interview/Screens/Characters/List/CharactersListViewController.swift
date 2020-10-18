@@ -39,8 +39,8 @@ class CharactersListViewController: UIViewController {
             switch state {
             case .idle, .error(_):
                 self.charactersTableView.tableFooterView = nil
-            default:
-                break
+            case .loading:
+                self.charactersTableView.tableFooterView = self.createSpinnerFooter()
             }
         }).disposed(by: disposeBag)
     }
@@ -62,6 +62,18 @@ class CharactersListViewController: UIViewController {
             charactersTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             charactersTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
+    }
+    
+    private func createSpinnerFooter() -> UIView {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: charactersTableView.frame.width, height: 50))
+        
+        let spinner = UIActivityIndicatorView()
+        spinner.center =  footerView.center
+        footerView.addSubview(spinner)
+        spinner.color = .black
+        spinner.startAnimating()
+        
+        return footerView
     }
 }
 

@@ -215,12 +215,10 @@ class CharacterDetailsViewController: UIViewController {
         speciesTypeLabel.text = character.species
         statusTypeLabel.text = character.status
         
-        if let genderName = character.gender {
-            if genderName.lowercased().contains("male") {
-                genderImageView.image = UIImage(named: "\(genderName)Gender")
-            } else {
-                genderImageView.image = #imageLiteral(resourceName: "unknownGender")
-            }
+        if let genderName = character.gender, genderName.lowercased().contains("male") {
+            genderImageView.image = UIImage(named: "\(genderName)Gender")
+        } else {
+            genderImageView.image = #imageLiteral(resourceName: "unknownGender")
         }
         
         characterStackView.isHidden = character.name == nil

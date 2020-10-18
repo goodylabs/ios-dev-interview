@@ -37,12 +37,11 @@ enum GoalsResource: TargetType {
     var task: Task {
         switch self {
         case .getCharacters(let pageNumber):
+            var parameters: [String:Any] = [:]
             if let pageNumber = pageNumber {
-                return .requestParameters(parameters: ["page" : pageNumber], encoding: URLEncoding.default)
-            } else {
-                return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+                parameters["page"] = pageNumber
             }
-            
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         case .getCharacter:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         }
