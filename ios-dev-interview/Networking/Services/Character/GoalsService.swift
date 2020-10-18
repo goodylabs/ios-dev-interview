@@ -11,7 +11,7 @@ import RxSwift
 import Moya
 
 protocol CharacterService {
-    func getCharacters() -> Observable<CharacterResponse>
+    func getCharacters(page: Int?) -> Observable<CharacterResponse>
     func getCharacterDetails(id: Int) -> Observable<Character>
 }
 
@@ -19,8 +19,8 @@ class CharacterServiceImpl: BaseApiService<GoalsResource>, CharacterService {
     
     static var shared = CharacterServiceImpl()
     
-    func getCharacters() -> Observable<CharacterResponse> {
-        return request(for: .getCharacters)
+    func getCharacters(page: Int?) -> Observable<CharacterResponse> {
+        return request(for: .getCharacters(page))
             .map {(items: CharacterResponse, _ response: Response) in
                 return items
         }

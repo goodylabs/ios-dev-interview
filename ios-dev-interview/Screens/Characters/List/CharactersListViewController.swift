@@ -34,6 +34,15 @@ class CharactersListViewController: UIViewController {
             .subscribe(onNext: { drinks in
                 self.charactersTableView.reloadData()
             }).disposed(by: disposeBag)
+        
+        viewModel.state.subscribe(onNext: { state in
+            switch state {
+            case .idle, .error(_):
+                self.charactersTableView.tableFooterView = nil
+            default:
+                break
+            }
+        }).disposed(by: disposeBag)
     }
     
     func setupLayout() {

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "unknowGender.png",
+      "filename" : "unknownGender.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "unknowGender@2.png",
+      "filename" : "unknownGender@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "unknowGender@3.png",
+      "filename" : "unknownGender@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

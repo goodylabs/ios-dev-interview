@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct CharacterResponse: Codable {
     var results: [Character]?
 }

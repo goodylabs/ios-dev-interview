@@ -168,11 +168,13 @@ class CharacterDetailsViewController: UIViewController {
             speciesStackView.bottomAnchor.constraint(equalTo: statusAndSpaciesView.bottomAnchor),
             speciesStackView.leadingAnchor.constraint(equalTo: statusAndSpaciesView.leadingAnchor),
             speciesStackView.trailingAnchor.constraint(equalTo: statusStackView.leadingAnchor),
-            speciesStackView.widthAnchor.constraint(equalTo: statusStackView.widthAnchor),
-            
+            speciesStackView.widthAnchor.constraint(equalTo: statusStackView.widthAnchor, multiplier: 1.2),
+            //
             statusStackView.topAnchor.constraint(equalTo: statusAndSpaciesView.topAnchor),
             statusStackView.bottomAnchor.constraint(equalTo: statusAndSpaciesView.bottomAnchor),
-            statusStackView.trailingAnchor.constraint(equalTo: statusAndSpaciesView.trailingAnchor)
+            statusStackView.trailingAnchor.constraint(equalTo: statusAndSpaciesView.trailingAnchor),
+            //
+            statusLabel.heightAnchor.constraint(equalTo: speciesLabel.heightAnchor)
         ])
     }
     
@@ -186,11 +188,13 @@ class CharacterDetailsViewController: UIViewController {
         for item in characterLabels {
             item.font = UIFont(name: "Roboto-Bold", size: 18)
             item.textColor = .darkBlue
+            item.numberOfLines = 0
         }
         
         statusLabel.textAlignment = .right
         statusTypeLabel.textAlignment = .right
-        characterNameLabel.numberOfLines = 0
+        characterNameLabel.textAlignment = .right
+        genderLabel.textAlignment = .center
     }
     
     private func translateUI() {
@@ -212,7 +216,11 @@ class CharacterDetailsViewController: UIViewController {
         statusTypeLabel.text = character.status
         
         if let genderName = character.gender {
-            genderImageView.image = UIImage(named: "\(genderName)Gender")
+            if genderName.lowercased().contains("male") {
+                genderImageView.image = UIImage(named: "\(genderName)Gender")
+            } else {
+                genderImageView.image = #imageLiteral(resourceName: "unknownGender")
+            }
         }
         
         characterStackView.isHidden = character.name == nil

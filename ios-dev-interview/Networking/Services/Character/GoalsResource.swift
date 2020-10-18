@@ -11,7 +11,7 @@ import Moya
 
 enum GoalsResource: TargetType {
     
-    case getCharacters
+    case getCharacters(Int?)
     case getCharacter(Int)
     
     var path: String {
@@ -36,8 +36,12 @@ enum GoalsResource: TargetType {
     
     var task: Task {
         switch self {
-        case .getCharacters:
-            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        case .getCharacters(let pageNumber):
+            if let pageNumber = pageNumber {
+                return .requestParameters(parameters: ["page" : pageNumber], encoding: URLEncoding.default)
+            } else {
+                return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+            }
             
         case .getCharacter:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
