@@ -5,7 +5,7 @@
 Simple swift project prepared for recruitment process.
 
 Clone this clean repository into your workspace, do some work and create pull request.
-
+Please, name your branch as 'name_surname' to easly indentificate you
 ---
 ---
 **STACK:**
