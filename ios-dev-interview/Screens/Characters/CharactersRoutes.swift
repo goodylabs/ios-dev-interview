@@ -27,7 +27,9 @@ enum CharactersRoutes: Route {
     }
     
     private func buildCharactersDetailsViewController(_ characterId: Int) -> UIViewController {
-        let controller = UIViewController()
+        let controller = CharacterDetailsViewController()
+        controller.characterDetailsVM = CharacterDetailsViewModel(service: CharacterServiceImpl.shared)
+        controller.characterDetailsVM.characterToFetch.onNext(characterId)
         return controller
     }
 }

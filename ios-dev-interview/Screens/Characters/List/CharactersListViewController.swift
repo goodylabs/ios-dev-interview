@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import CoreMIDI
 
 class CharactersListViewController: UIViewController {
     
@@ -21,6 +22,7 @@ class CharactersListViewController: UIViewController {
         super.viewDidLoad()
         setupLayout()
         bindToViewModel()
+        cellSelected()
         viewModel.fetchCharacters()
     }
     
@@ -29,6 +31,15 @@ class CharactersListViewController: UIViewController {
             .subscribe(onNext: { drinks in
                 self.charactersTableView.reloadData()
             }).disposed(by: disposeBag)
+    }
+
+    private func cellSelected() {
+        charactersTableView.rx.itemSelected.subscribe { [weak self] event in
+            guard let index = event.element else { return }
+            guard let characterId = self?.viewModel.characters.value[index.row].id else { return }
+            let controller = CharactersRoutes.details(characterId)
+            self?.navigationController?.pushViewController(controller.screen, animated: true)
+        }.disposed(by: disposeBag)
     }
     
     func setupLayout() {

@@ -44,6 +44,8 @@
 		CFF7533F25151D6100FBBAFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA84F21C776827009F64E4 /* LaunchScreen.storyboard */; };
 		CFF7535825151E2D00FBBAFD /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6BA090423A11D3E006B6509 /* Localization.strings */; };
 		CFF7535925151E3200FBBAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
+		E733E0C727F1BAA700A94F0D /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733E0C627F1BAA700A94F0D /* CharacterDetailsViewController.swift */; };
+		E733E0C927F1DEA500A94F0D /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E733E0C827F1DEA500A94F0D /* CharacterDetailsViewModel.swift */; };
 		FB0503193B4FCA550FEA275F /* Pods_ios_dev_interview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F0316A113B6400B46EA26F /* Pods_ios_dev_interview.framework */; };
 		FE4D635C22B2C75400685161 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D635B22B2C75400685161 /* Navigator.swift */; };
 		FE4D635E22B2CAFF00685161 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D635D22B2CAFF00685161 /* AppNavigator.swift */; };
@@ -110,6 +112,8 @@
 		CFB3EE5724F6FC0700BE1034 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		CFDC3443236984AB0020331A /* ios-dev-interview-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-dev-interview-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDC3447236984AB0020331A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E733E0C627F1BAA700A94F0D /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
+		E733E0C827F1DEA500A94F0D /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
 		FE4D635B22B2C75400685161 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		FE4D635D22B2CAFF00685161 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		FE4D636322B2CDF700685161 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
@@ -168,9 +172,9 @@
 			isa = PBXGroup;
 			children = (
 				CF92EF6A235C728A005B244A /* R.generated.swift */,
-				CFDC3444236984AB0020331A /* ios-dev-interview-tests */,
 				9B5AFADB1C7205EC002347D6 /* Products */,
 				9B0C72511C738C3100BAF3B1 /* ios-dev-interview */,
+				CFDC3444236984AB0020331A /* ios-dev-interview-tests */,
 				506A29AE0C7D2BF634BD7D7D /* Pods */,
 				FE1800CC176E3937FB2BF792 /* Frameworks */,
 			);
@@ -222,7 +226,7 @@
 		CF02837C252F31E2008BCDF5 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
-				CF028380252F3217008BCDF5 /* Details */,
+				E733E0C527F1B9AF00A94F0D /* Details */,
 				CF02837F252F3200008BCDF5 /* List */,
 				CF02837D252F31FA008BCDF5 /* CharactersRoutes.swift */,
 			);
@@ -237,13 +241,6 @@
 				CF028383252F3252008BCDF5 /* CharactersListViewModel.swift */,
 			);
 			path = List;
-			sourceTree = "<group>";
-		};
-		CF028380252F3217008BCDF5 /* Details */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Details;
 			sourceTree = "<group>";
 		};
 		CF028385252F3B5E008BCDF5 /* Components */ = {
@@ -337,6 +334,15 @@
 				A6D27A28240E9C1000A8D88F /* KIFExtensions.swift */,
 			);
 			path = "ios-dev-interview-tests";
+			sourceTree = "<group>";
+		};
+		E733E0C527F1B9AF00A94F0D /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				E733E0C627F1BAA700A94F0D /* CharacterDetailsViewController.swift */,
+				E733E0C827F1DEA500A94F0D /* CharacterDetailsViewModel.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		E8290BFC1D832D6400599960 /* Extensions */ = {
@@ -481,12 +487,31 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview/Pods-ios-dev-interview-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview/Pods-ios-dev-interview-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview/Pods-ios-dev-interview-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -542,12 +567,23 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview-tests/Pods-ios-dev-interview-tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview-tests/Pods-ios-dev-interview-tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview-tests/Pods-ios-dev-interview-tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -587,10 +623,12 @@
 				CF02837E252F31FA008BCDF5 /* CharactersRoutes.swift in Sources */,
 				FE4D636422B2CDF700685161 /* ViewModelState.swift in Sources */,
 				CFB3EE4924F55AF600BE1034 /* CharacterModel.swift in Sources */,
+				E733E0C927F1DEA500A94F0D /* CharacterDetailsViewModel.swift in Sources */,
 				CF028382252F323C008BCDF5 /* CharactersListViewController.swift in Sources */,
 				CF0EDCEE2361E58D000B6C4A /* TargetType+Base.swift in Sources */,
 				CF0EDCE12361E58D000B6C4A /* MultipartMedia.swift in Sources */,
 				CF0EDCDF2361E58D000B6C4A /* APIService.swift in Sources */,
+				E733E0C727F1BAA700A94F0D /* CharacterDetailsViewController.swift in Sources */,
 				9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */,
 				FE4D635C22B2C75400685161 /* Navigator.swift in Sources */,
 				CF028387252F3B8C008BCDF5 /* CharacterCell.swift in Sources */,

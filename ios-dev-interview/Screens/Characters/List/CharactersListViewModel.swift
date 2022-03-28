@@ -53,16 +53,17 @@ extension CharactersListViewModel: UITableViewDataSource {
         }
         
         let item = characters.value[indexPath.row]
-        
-        cell.button.rx.controlEvent(.touchUpInside)
-            .subscribe(onNext: { [weak self] _ in
-                self?.navigateToDetails(item.id)
-            }).disposed(by: disposeBag)
+
+//        cell.button.rx.controlEvent(.allTouchEvents)
+//            .subscribe(onNext: { [weak self] _ in
+//                print("im here")
+//                self?.navigateToDetails(item.id)
+//            }).disposed(by: disposeBag)
+
         cell.setup(character: item)
         
         return cell
     }
-    
 }
 
 extension CharactersListViewModel: UITableViewDelegate {
