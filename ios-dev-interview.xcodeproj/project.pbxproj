@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27FABEB727F233E4006806A7 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FABEB627F233E4006806A7 /* CharacterDetailsViewController.swift */; };
+		27FABEB927F23506006806A7 /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FABEB827F23506006806A7 /* CharacterDetailsViewModel.swift */; };
 		9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */; };
 		9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
 		9BFA84F31C776827009F64E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA84F21C776827009F64E4 /* LaunchScreen.storyboard */; };
@@ -74,6 +76,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27FABEB627F233E4006806A7 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
+		27FABEB827F23506006806A7 /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
 		4C984022D8904A4E2309D5EC /* Pods-ios-dev-interview-tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-dev-interview-tests.debug.xcconfig"; path = "Target Support Files/Pods-ios-dev-interview-tests/Pods-ios-dev-interview-tests.debug.xcconfig"; sourceTree = "<group>"; };
 		62DE97ED0CB6AA89FEEE41BE /* Pods-ios-dev-interview-tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-dev-interview-tests.release.xcconfig"; path = "Target Support Files/Pods-ios-dev-interview-tests/Pods-ios-dev-interview-tests.release.xcconfig"; sourceTree = "<group>"; };
 		66D03274C9C9D0C6A820EABF /* Pods_ios_dev_interview_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_dev_interview_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +139,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27FABEBA27F2425B006806A7 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		506A29AE0C7D2BF634BD7D7D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +253,9 @@
 		CF028380252F3217008BCDF5 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				27FABEBA27F2425B006806A7 /* Component */,
+				27FABEB627F233E4006806A7 /* CharacterDetailsViewController.swift */,
+				27FABEB827F23506006806A7 /* CharacterDetailsViewModel.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -591,12 +605,14 @@
 				CF0EDCEE2361E58D000B6C4A /* TargetType+Base.swift in Sources */,
 				CF0EDCE12361E58D000B6C4A /* MultipartMedia.swift in Sources */,
 				CF0EDCDF2361E58D000B6C4A /* APIService.swift in Sources */,
+				27FABEB727F233E4006806A7 /* CharacterDetailsViewController.swift in Sources */,
 				9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */,
 				FE4D635C22B2C75400685161 /* Navigator.swift in Sources */,
 				CF028387252F3B8C008BCDF5 /* CharacterCell.swift in Sources */,
 				CFB3EE4324F55AAE00BE1034 /* GoalsService.swift in Sources */,
 				FE4D635E22B2CAFF00685161 /* AppNavigator.swift in Sources */,
 				CFB3EE5824F6FC0700BE1034 /* BaseViewModel.swift in Sources */,
+				27FABEB927F23506006806A7 /* CharacterDetailsViewModel.swift in Sources */,
 				CF92EF6B235C728B005B244A /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
