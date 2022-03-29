@@ -11,7 +11,6 @@ import Kingfisher
 
 class CharacterCell: UITableViewCell {
     
-    let button = UIButton()
     let avatarView = UIImageView()
     let name = UILabel()
     
@@ -33,13 +32,11 @@ class CharacterCell: UITableViewCell {
     }
     
     func setupViews() {
-        button.translatesAutoresizingMaskIntoConstraints = false
         avatarView.translatesAutoresizingMaskIntoConstraints = false
         name.translatesAutoresizingMaskIntoConstraints = false
         //
         addSubview(avatarView)
         addSubview(name)
-        addSubview(button)
         //
         NSLayoutConstraint.activate([
             avatarView.topAnchor.constraint(equalTo: topAnchor),
@@ -50,11 +47,6 @@ class CharacterCell: UITableViewCell {
             //
             name.centerYAnchor.constraint(equalTo: avatarView.centerYAnchor),
             name.leadingAnchor.constraint(equalTo: avatarView.trailingAnchor, constant: 15),
-            //
-            button.topAnchor.constraint(equalTo: topAnchor),
-            button.leadingAnchor.constraint(equalTo: leadingAnchor),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor),
-            button.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
     
