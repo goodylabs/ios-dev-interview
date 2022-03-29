@@ -45,7 +45,8 @@ class CharacterCell: UITableViewCell {
             avatarView.topAnchor.constraint(equalTo: topAnchor),
             avatarView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             avatarView.widthAnchor.constraint(equalToConstant: 40),
-            avatarView.heightAnchor.constraint(equalToConstant: 40),
+            avatarView.heightAnchor.constraint(equalTo: avatarView.widthAnchor),
+            avatarView.bottomAnchor.constraint(equalTo: bottomAnchor),
             //
             name.centerYAnchor.constraint(equalTo: avatarView.centerYAnchor),
             name.leadingAnchor.constraint(equalTo: avatarView.trailingAnchor, constant: 15),
