@@ -31,6 +31,12 @@ class CharacterCell: UITableViewCell {
         }
     }
     
+    private lazy var bottomConstraint: NSLayoutConstraint = {
+        let constraint = avatarView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        constraint.priority = .defaultHigh
+        return constraint
+    }()
+    
     func setupViews() {
         avatarView.translatesAutoresizingMaskIntoConstraints = false
         name.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +49,7 @@ class CharacterCell: UITableViewCell {
             avatarView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             avatarView.widthAnchor.constraint(equalToConstant: 40),
             avatarView.heightAnchor.constraint(equalTo: avatarView.widthAnchor),
-            avatarView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            bottomConstraint,
             //
             name.centerYAnchor.constraint(equalTo: avatarView.centerYAnchor),
             name.leadingAnchor.constraint(equalTo: avatarView.trailingAnchor, constant: 15),
