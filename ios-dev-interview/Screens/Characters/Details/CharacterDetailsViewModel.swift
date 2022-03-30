@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 final class CharacterDetailsViewModel: BaseViewModel {
+    
+    let character = BehaviorRelay<Character?>(value: nil)
     
     private let service: CharacterService
     private let id: Int
@@ -18,4 +22,12 @@ final class CharacterDetailsViewModel: BaseViewModel {
         self.id = id
     }
     
+    func fetchCharacter() {
+        service.getCharacter(id: id)
+            .subscribe(onNext: { res in
+                self.character.accept(res)
+            }, onError: { error in
+                print(error)
+            }).disposed(by: disposeBag)
+    }
 }
