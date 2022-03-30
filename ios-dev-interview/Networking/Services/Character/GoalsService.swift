@@ -12,6 +12,7 @@ import Moya
 
 protocol CharacterService {
     func getCharacters() -> Observable<CharacterResponse>
+    func getCharacter(id: Int) -> Observable<Character>
 }
 
 class CharacterServiceImpl: BaseApiService<GoalsResource>, CharacterService {
@@ -25,4 +26,10 @@ class CharacterServiceImpl: BaseApiService<GoalsResource>, CharacterService {
         }
     }
     
+    func getCharacter(id: Int) -> Observable<Character> {
+        return request(for: .getCharacter(id))
+            .map {(item: Character, _ response: Response) in
+                return item
+            }
+    }
 }
