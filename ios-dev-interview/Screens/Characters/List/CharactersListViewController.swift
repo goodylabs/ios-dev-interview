@@ -17,13 +17,12 @@ class CharactersListViewController: UIViewController {
 
     let disposeBag = DisposeBag()
     let charactersTableView: UITableView = UITableView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
         bindToViewModel()
-        cellSelected()
-        viewModel.fetchCharacters()
+        viewModel.page.accept(1)
     }
     
     private func bindToViewModel() {
@@ -31,15 +30,10 @@ class CharactersListViewController: UIViewController {
             .subscribe(onNext: { drinks in
                 self.charactersTableView.reloadData()
             }).disposed(by: disposeBag)
-    }
 
-    private func cellSelected() {
-        charactersTableView.rx.itemSelected.subscribe { [weak self] event in
-            guard let index = event.element else { return }
-            guard let characterId = self?.viewModel.characters.value[index.row].id else { return }
-            let controller = CharactersRoutes.details(characterId)
-            self?.navigationController?.pushViewController(controller.screen, animated: true)
-        }.disposed(by: disposeBag)
+        viewModel.error.subscribe(onNext: { [weak self] err in
+            self?.fetchingDataAlert(errMessage: err?.localizedDescription)
+        }).disposed(by: disposeBag)
     }
     
     func setupLayout() {
@@ -47,17 +41,29 @@ class CharactersListViewController: UIViewController {
         //
         charactersTableView.register(CharacterCell.self, forCellReuseIdentifier: String(describing: CharacterCell.self))
         charactersTableView.translatesAutoresizingMaskIntoConstraints = false
-        charactersTableView.delegate = viewModel
         charactersTableView.dataSource = viewModel
+        charactersTableView.delegate = viewModel
         view.addSubview(charactersTableView)
         //
         NSLayoutConstraint.activate([
-            charactersTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            charactersTableView.topAnchor.constraint(equalTo: view.topAnchor),
             charactersTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             charactersTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            charactersTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            charactersTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-    
+
+    func fetchingDataAlert(errMessage: String?) {
+        guard let errMessage = errMessage else { return }
+        let alert = UIAlertController(title: errMessage, message: "", preferredStyle: .actionSheet)
+        self.present(alert, animated: true, completion: {
+            alert.view.superview?.subviews[1].isUserInteractionEnabled = true
+            alert.view.superview?.subviews[1].addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+        })
+    }
+
+    @objc func alertControllerBackgroundTapped() {
+        self.dismiss(animated: true)
+    }
 }
 

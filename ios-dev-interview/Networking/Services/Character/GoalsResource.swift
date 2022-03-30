@@ -10,38 +10,38 @@ import Foundation
 import Moya
 
 enum GoalsResource: TargetType {
-    
-    case getCharacters
+
+    case getCharacters(Int)
     case getCharacter(Int)
-    
+
     var path: String {
         switch self {
-        case .getCharacters:
+        case .getCharacters(_):
             return "/character"
         case .getCharacter(let id):
             return "/character/\(id)"
         }
     }
-    
+
     var method: Moya.Method {
         switch self {
         case .getCharacters, .getCharacter:
             return .get
         }
     }
-    
+
     var headers: [String: String]? {
         return getHeaders()
     }
-    
+
     var task: Task {
         switch self {
-        case .getCharacters:
-            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
-            
+        case .getCharacters(let page):
+            return .requestParameters(parameters: ["page":"\(page)"], encoding: URLEncoding.default)
+
         case .getCharacter:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         }
     }
-    
+
 }

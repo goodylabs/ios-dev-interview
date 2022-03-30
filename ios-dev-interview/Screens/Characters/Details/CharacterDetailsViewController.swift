@@ -39,6 +39,7 @@ class CharacterDetailsViewController: UIViewController {
         characterDetailsVM.characterName.bind(to: nameText.rx.text).disposed(by: disposeBag)
         characterDetailsVM.characterSpecies.bind(to: speciesText.rx.text).disposed(by: disposeBag)
         characterDetailsVM.characterStatus.bind(to: statusText.rx.text).disposed(by: disposeBag)
+
         characterDetailsVM.characterGender.subscribe(onNext: { [weak self] gender in
             switch gender {
             case .male:
@@ -46,11 +47,19 @@ class CharacterDetailsViewController: UIViewController {
             case .female:
                 self?.genderImg.image = R.image.femaleGenderImg()
             case .unknown:
-                self?.genderImg.image = nil
+                self?.genderImg.image = R.image.questionmark()
+            case .none:
+                self?.genderImg.image = R.image.questionmark()
             }
         }).disposed(by: disposeBag)
+
         characterDetailsVM.characterImgUrl.subscribe(onNext: { [weak self] url in
+            guard let url = url else { return }
             self?.avatarImg.kf.setImage(with: URL(string: url))
+        }).disposed(by: disposeBag)
+
+        characterDetailsVM.error.subscribe(onNext: { [weak self] error in
+            self?.fetchingDataAlert(errMessage: error?.localizedDescription)
         }).disposed(by: disposeBag)
     }
 
@@ -69,8 +78,10 @@ class CharacterDetailsViewController: UIViewController {
         genderLabel.translatesAutoresizingMaskIntoConstraints = false
         genderImg.translatesAutoresizingMaskIntoConstraints = false
         //
-        avatarImg.image = R.image.placeholder()!
         avatarLabel.text = "Avatar:"
+        avatarImg.contentMode = .scaleAspectFill
+        avatarImg.layer.masksToBounds = true
+        avatarImg.layer.cornerRadius = 10
         view.addSubview(avatarImg)
         view.addSubview(avatarLabel)
         //
@@ -84,7 +95,8 @@ class CharacterDetailsViewController: UIViewController {
         speciesLabel.text = "Species:"
         speciesText.textColor = .systemBlue
         speciesText.font = UIFont.boldSystemFont(ofSize: 16)
-
+        speciesText.numberOfLines = 0
+        speciesText.textAlignment = .right
         view.addSubview(speciesLabel)
         view.addSubview(speciesText)
         //
@@ -98,7 +110,7 @@ class CharacterDetailsViewController: UIViewController {
         view.addSubview(genderLabel)
         view.addSubview(genderImg)
         //
-
+        setupFonts()
 
         NSLayoutConstraint.activate([
             avatarImg.widthAnchor.constraint(equalToConstant: 200),
@@ -111,14 +123,15 @@ class CharacterDetailsViewController: UIViewController {
             nameLabel.leadingAnchor.constraint(equalTo: avatarImg.leadingAnchor),
             nameText.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor,constant: 20),
             nameLabel.topAnchor.constraint(equalTo: avatarImg.bottomAnchor, constant: 30),
-            nameLabel.widthAnchor.constraint(equalToConstant: 50),
             nameText.topAnchor.constraint(equalTo: nameLabel.topAnchor),
             nameText.trailingAnchor.constraint(equalTo: avatarImg.trailingAnchor),
             //
             speciesLabel.topAnchor.constraint(equalTo: nameText.bottomAnchor, constant: 50),
             speciesLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
-            speciesText.trailingAnchor.constraint(equalTo: speciesLabel.trailingAnchor),
+            speciesLabel.trailingAnchor.constraint(lessThanOrEqualTo: avatarImg.centerXAnchor),
             speciesText.topAnchor.constraint(equalTo: speciesLabel.bottomAnchor, constant: 10),
+            speciesText.leadingAnchor.constraint(equalTo: speciesLabel.leadingAnchor),
+            speciesText.trailingAnchor.constraint(equalTo: speciesLabel.trailingAnchor),
             //
             statusLabel.topAnchor.constraint(equalTo: speciesLabel.topAnchor),
             statusLabel.trailingAnchor.constraint(equalTo: avatarImg.trailingAnchor),
@@ -129,10 +142,44 @@ class CharacterDetailsViewController: UIViewController {
             genderLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             genderImg.topAnchor.constraint(equalTo: genderLabel.bottomAnchor, constant: 20),
             genderImg.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-
         ])
+    }
 
+    func setupFonts() {
+        guard let robotoBold = R.font.robotoBold(size: UIFont.labelFontSize) else { return }
+        guard let robotoLight = R.font.robotoLight(size: UIFont.labelFontSize) else { return }
+        guard let robotoMedium = R.font.robotoMedium(size: UIFont.labelFontSize) else { return }
+        avatarLabel.font = UIFontMetrics.default.scaledFont(for: robotoLight)
+        nameLabel.font = UIFontMetrics.default.scaledFont(for: robotoLight)
+        nameText.font = UIFontMetrics.default.scaledFont(for: robotoBold)
+        speciesLabel.font = UIFontMetrics.default.scaledFont(for: robotoLight)
+        speciesText.font = UIFontMetrics.default.scaledFont(for: robotoMedium)
+        statusLabel.font = UIFontMetrics.default.scaledFont(for: robotoLight)
+        statusText.font = UIFontMetrics.default.scaledFont(for: robotoMedium)
+        genderLabel.font = UIFontMetrics.default.scaledFont(for: robotoLight)
 
+        //
+        avatarLabel.adjustsFontForContentSizeCategory = true
+        nameLabel.adjustsFontForContentSizeCategory = true
+        nameText.adjustsFontForContentSizeCategory = true
+        speciesLabel.adjustsFontForContentSizeCategory = true
+        speciesText.adjustsFontForContentSizeCategory = true
+        statusLabel.adjustsFontForContentSizeCategory = true
+        statusText.adjustsFontForContentSizeCategory = true
+        genderLabel.adjustsFontForContentSizeCategory = true
+    }
+
+    func fetchingDataAlert(errMessage: String?) {
+        guard let errMessage = errMessage else { return }
+        let alert = UIAlertController(title: errMessage, message: "", preferredStyle: .actionSheet)
+        self.present(alert, animated: true, completion: {
+            alert.view.superview?.subviews[1].isUserInteractionEnabled = true
+            alert.view.superview?.subviews[1].addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+        })
+    }
+
+    @objc func alertControllerBackgroundTapped() {
+        self.dismiss(animated: true)
     }
 
 }

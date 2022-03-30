@@ -13,7 +13,7 @@ struct CharacterResponse: Codable {
     var results: [Character]?
 }
 
-struct Character: Codable {
+struct Character: Codable, Equatable {
     var id: Int?
     var name: String?
     var status: String?
