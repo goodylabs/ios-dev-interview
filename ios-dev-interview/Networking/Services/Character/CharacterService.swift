@@ -1,5 +1,5 @@
 //
-//  GoalsService.swift
+//  CharacterService.swift
 //  ios-dev-interview
 //
 //  Created by Radosław Tarnas on 25/08/2020.
@@ -11,16 +11,16 @@ import RxSwift
 import Moya
 
 protocol CharacterService {
-    func getCharacters() -> Observable<CharacterResponse>
+    func getCharacters(page: Int) -> Observable<CharacterResponse>
     func getCharacter(id: Int) -> Observable<Character>
 }
 
-class CharacterServiceImpl: BaseApiService<GoalsResource>, CharacterService {
+class CharacterServiceImpl: BaseApiService<CharacterResource>, CharacterService {
     
     static var shared = CharacterServiceImpl()
     
-    func getCharacters() -> Observable<CharacterResponse> {
-        return request(for: .getCharacters)
+    func getCharacters(page: Int) -> Observable<CharacterResponse> {
+        return request(for: .getCharacters(page: page))
             .map {(items: CharacterResponse, _ response: Response) in
                 return items
         }

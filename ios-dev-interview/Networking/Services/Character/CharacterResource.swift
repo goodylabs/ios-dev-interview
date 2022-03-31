@@ -1,5 +1,5 @@
 //
-//  GoalsResource.swift
+//  CharacterResource.swift
 //  ios-dev-interview
 //
 //  Created by Radosław Tarnas on 25/08/2020.
@@ -9,15 +9,15 @@
 import Foundation
 import Moya
 
-enum GoalsResource: TargetType {
+enum CharacterResource: TargetType {
     
-    case getCharacters
+    case getCharacters(page: Int)
     case getCharacter(Int)
     
     var path: String {
         switch self {
         case .getCharacters:
-            return "/character"
+            return "/character/"
         case .getCharacter(let id):
             return "/character/\(id)"
         }
@@ -36,9 +36,8 @@ enum GoalsResource: TargetType {
     
     var task: Task {
         switch self {
-        case .getCharacters:
-            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
-            
+        case .getCharacters(let page):
+            return .requestParameters(parameters: ["page": page], encoding: URLEncoding.default)
         case .getCharacter:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         }
