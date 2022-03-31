@@ -12,23 +12,9 @@ import RxTest
 @testable import IOS_DEV_INTERVIEW
 
 class CharactersViewModelTests: XCTestCase {
-    
-    var viewModel: CharactersViewModel!
-    var disposeBag: DisposeBag!
-    
-    override func setUp() {
-        viewModel = CharactersViewModel()
-        disposeBag = DisposeBag()
-    }
 
-    override func tearDown() {
-        viewModel = nil
-        disposeBag = nil
-    }
-    
-    func testBottomText() {
-        waitForExpectations(timeout: 5, handler: nil)
-        XCTAssert(true)
+    func test() {
+
     }
     
 }
