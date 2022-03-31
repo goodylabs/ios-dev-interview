@@ -158,7 +158,7 @@ open class BaseApiService<T>: APIService where T: TargetType {
             return error
         }
         switch moyaError {
-        case .statusCode(let response):
+        case .statusCode(_):
             return error
         case .stringMapping,
              .jsonMapping,

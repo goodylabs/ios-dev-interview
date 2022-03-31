@@ -28,7 +28,7 @@ open class BaseNavigator: Navigator {
  ViewController that is currently displayed. This way it can
  handle any kind of navigation action that you might want to dispatch.
  */
-public protocol Navigator: class {
+public protocol Navigator: AnyObject {
     /// The root navigation controller of your stack.
     var rootViewController: UINavigationController? { get set }
     

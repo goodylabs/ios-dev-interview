@@ -10,19 +10,28 @@ import Foundation
 import RxSwift
 import Moya
 
-protocol CharacterService {
-    func getCharacters() -> Observable<CharacterResponse>
+protocol CharacterService: AnyObject {
+    func getCharacters(page: Int) -> Observable<CharacterResponse>
+    func getCharacter(charactedID: Int) -> Observable<Character>
 }
 
 class CharacterServiceImpl: BaseApiService<GoalsResource>, CharacterService {
     
     static var shared = CharacterServiceImpl()
     
-    func getCharacters() -> Observable<CharacterResponse> {
-        return request(for: .getCharacters)
+    func getCharacters(page: Int) -> Observable<CharacterResponse> {
+        return request(for: .getCharacters(page))
             .map {(items: CharacterResponse, _ response: Response) in
                 return items
         }
     }
+
+    func getCharacter(charactedID: Int) -> Observable<Character> {
+        return request(for: .getCharacter(charactedID))
+            .map {(items: Character, _ response: Response) in
+                return items
+            }
+    }
     
 }
+
