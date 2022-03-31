@@ -28,10 +28,14 @@
 		CF0EDCDF2361E58D000B6C4A /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EDCC82361E58D000B6C4A /* APIService.swift */; };
 		CF0EDCE12361E58D000B6C4A /* MultipartMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EDCCB2361E58D000B6C4A /* MultipartMedia.swift */; };
 		CF0EDCEE2361E58D000B6C4A /* TargetType+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0EDCDE2361E58D000B6C4A /* TargetType+Base.swift */; };
+		CF2E4A3E27F24DB200029FE9 /* CharacterDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E4A3D27F24DB200029FE9 /* CharacterDetailsModel.swift */; };
+		CF42242627F10F120086C5B7 /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42242527F10F120086C5B7 /* CharacterDetailsViewModel.swift */; };
 		CF80AAA12371C3EA0029B269 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF80AA9E2371C3E90029B269 /* Roboto-Medium.ttf */; };
 		CF80AAA22371C3EA0029B269 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF80AA9F2371C3E90029B269 /* Roboto-Bold.ttf */; };
 		CF80AAA32371C3EA0029B269 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF80AAA02371C3E90029B269 /* Roboto-Light.ttf */; };
+		CF8A3DAE27EFAFB700B5F202 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A3DAD27EFAFB700B5F202 /* CharacterDetailsViewController.swift */; };
 		CF92EF6B235C728B005B244A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF92EF6A235C728A005B244A /* R.generated.swift */; };
+		CF97B1A327EFACC600453AA0 /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97B1A227EFACC600453AA0 /* CharacterDetailsView.swift */; };
 		CFB3EE4324F55AAE00BE1034 /* GoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3EE4224F55AAE00BE1034 /* GoalsService.swift */; };
 		CFB3EE4424F55AAE00BE1034 /* GoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3EE4224F55AAE00BE1034 /* GoalsService.swift */; };
 		CFB3EE4624F55AE600BE1034 /* GoalsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3EE4524F55AE600BE1034 /* GoalsResource.swift */; };
@@ -100,10 +104,14 @@
 		CF0EDCC82361E58D000B6C4A /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		CF0EDCCB2361E58D000B6C4A /* MultipartMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartMedia.swift; sourceTree = "<group>"; };
 		CF0EDCDE2361E58D000B6C4A /* TargetType+Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TargetType+Base.swift"; sourceTree = "<group>"; };
+		CF2E4A3D27F24DB200029FE9 /* CharacterDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsModel.swift; sourceTree = "<group>"; };
+		CF42242527F10F120086C5B7 /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
 		CF80AA9E2371C3E90029B269 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		CF80AA9F2371C3E90029B269 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		CF80AAA02371C3E90029B269 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		CF8A3DAD27EFAFB700B5F202 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		CF92EF6A235C728A005B244A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		CF97B1A227EFACC600453AA0 /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
 		CFB3EE4224F55AAE00BE1034 /* GoalsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsService.swift; sourceTree = "<group>"; };
 		CFB3EE4524F55AE600BE1034 /* GoalsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsResource.swift; sourceTree = "<group>"; };
 		CFB3EE4824F55AF600BE1034 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
@@ -222,7 +230,7 @@
 		CF02837C252F31E2008BCDF5 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
-				CF028380252F3217008BCDF5 /* Details */,
+				CF97B1A127EFAC9300453AA0 /* Details */,
 				CF02837F252F3200008BCDF5 /* List */,
 				CF02837D252F31FA008BCDF5 /* CharactersRoutes.swift */,
 			);
@@ -237,13 +245,6 @@
 				CF028383252F3252008BCDF5 /* CharactersListViewModel.swift */,
 			);
 			path = List;
-			sourceTree = "<group>";
-		};
-		CF028380252F3217008BCDF5 /* Details */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Details;
 			sourceTree = "<group>";
 		};
 		CF028385252F3B5E008BCDF5 /* Components */ = {
@@ -290,6 +291,17 @@
 				CF80AA9E2371C3E90029B269 /* Roboto-Medium.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		CF97B1A127EFAC9300453AA0 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				CF97B1A227EFACC600453AA0 /* CharacterDetailsView.swift */,
+				CF8A3DAD27EFAFB700B5F202 /* CharacterDetailsViewController.swift */,
+				CF42242527F10F120086C5B7 /* CharacterDetailsViewModel.swift */,
+				CF2E4A3D27F24DB200029FE9 /* CharacterDetailsModel.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		CFADB8A8230EE1B500368E9A /* Screens */ = {
@@ -416,7 +428,7 @@
 			attributes = {
 				DefaultBuildSystemTypeForWorkspace = Original;
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "Flipside Group";
 				TargetAttributes = {
 					9B5AFAD91C7205EB002347D6 = {
@@ -481,12 +493,33 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview/Pods-ios-dev-interview-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview/Pods-ios-dev-interview-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview/Pods-ios-dev-interview-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -542,12 +575,23 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview-tests/Pods-ios-dev-interview-tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview-tests/Pods-ios-dev-interview-tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios-dev-interview-tests/Pods-ios-dev-interview-tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -594,10 +638,14 @@
 				9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */,
 				FE4D635C22B2C75400685161 /* Navigator.swift in Sources */,
 				CF028387252F3B8C008BCDF5 /* CharacterCell.swift in Sources */,
+				CF97B1A327EFACC600453AA0 /* CharacterDetailsView.swift in Sources */,
 				CFB3EE4324F55AAE00BE1034 /* GoalsService.swift in Sources */,
 				FE4D635E22B2CAFF00685161 /* AppNavigator.swift in Sources */,
 				CFB3EE5824F6FC0700BE1034 /* BaseViewModel.swift in Sources */,
 				CF92EF6B235C728B005B244A /* R.generated.swift in Sources */,
+				CF42242627F10F120086C5B7 /* CharacterDetailsViewModel.swift in Sources */,
+				CF2E4A3E27F24DB200029FE9 /* CharacterDetailsModel.swift in Sources */,
+				CF8A3DAE27EFAFB700B5F202 /* CharacterDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +717,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -695,7 +744,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_PREPROCESS = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -727,6 +776,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -747,7 +797,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_PREPROCESS = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -774,7 +824,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GOOGLE_SERVICES_FILE = "GoogleService-Debug-Info";
 				INFOPLIST_FILE = "${PROJECT_BASE_NAME}/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -812,7 +862,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GOOGLE_SERVICES_FILE = "GoogleService-Info";
 				INFOPLIST_FILE = "${PROJECT_BASE_NAME}/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

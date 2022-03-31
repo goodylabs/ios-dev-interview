@@ -37,9 +37,9 @@ class CharacterCell: UITableViewCell {
         avatarView.translatesAutoresizingMaskIntoConstraints = false
         name.translatesAutoresizingMaskIntoConstraints = false
         //
-        addSubview(avatarView)
-        addSubview(name)
-        addSubview(button)
+        contentView.addSubview(avatarView)
+        contentView.addSubview(name)
+        contentView.addSubview(button)
         //
         NSLayoutConstraint.activate([
             avatarView.topAnchor.constraint(equalTo: topAnchor),

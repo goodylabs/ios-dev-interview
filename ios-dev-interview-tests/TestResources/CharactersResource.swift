@@ -1,10 +1,10 @@
-//
-//  CharactersResource.swift
-//  ios-dev-interview-tests
-//
-//  Created by Adam Majczyk on 15/09/2020.
-//  Copyright © 2020 Goodylabs. All rights reserved.
-//
+////
+////  CharactersResource.swift
+////  ios-dev-interview-tests
+////
+////  Created by Adam Majczyk on 15/09/2020.
+////  Copyright © 2020 Goodylabs. All rights reserved.
+////
 
 import Foundation
 import Moya
@@ -14,7 +14,7 @@ enum CharactersResource: TargetType {
     case getCharacters
     
     var baseURL: URL {
-        return URL(string: "https://www.google.com")!
+        return URL(string: "https://rickandmortyapi.com/api")!
     }
     
     var sampleData: Data {
@@ -24,7 +24,7 @@ enum CharactersResource: TargetType {
     var path: String {
         switch self {
         case .getCharacters:
-            return "/characters"
+            return "/character"
         }
     }
     
@@ -45,5 +45,4 @@ enum CharactersResource: TargetType {
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         }
     }
-    
 }
