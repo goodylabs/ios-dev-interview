@@ -27,13 +27,14 @@ class CharactersListViewModel: BaseViewModel {
     }
 
     func pageBinding() {
-        let newCharacters = page.flatMapLatest { value in
+        let newCharacters = page.flatMapLatest { [unowned self] value in
             self.service.getCharacters(page: value).catchError { err in
                 return Observable.error(err)
             }
         }
 
-        newCharacters.subscribe(onNext: { [unowned self] characters in
+        newCharacters.subscribe(onNext: { [weak self] characters in
+            guard let self = self else { return }
             guard let characters = characters.results else { return }
             self.characters.accept(self.characters.value + characters)
         },onError: { [weak self] err in

@@ -34,7 +34,7 @@ class CharacterDetailsViewModel {
             self.service.getCharacter(charactedID: value).catchError { err in
                 return Observable.error(err)
             }
-        }.share()
+        }
 
         devicesfromApi.subscribe(onNext: { [weak self] character in
             self?.characterName.accept(character.name)
