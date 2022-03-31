@@ -66,7 +66,7 @@ final class CharacterDetailsViewController: UIViewController {
     }
     
     private func configureViews() {
-        title = "Character"
+        title = R.string.localization.character()
         view.backgroundColor = .white
         
         characterAvatarView.layer.borderColor = UIColor.black.cgColor
@@ -74,11 +74,11 @@ final class CharacterDetailsViewController: UIViewController {
         characterAvatarView.layer.cornerRadius = 20
         characterAvatarView.clipsToBounds = true
         
-        avatarLabel.text = "Avatar:"
-        nameLabel.text = "Name:"
-        speciesLabel.text = "Species:"
-        statusLabel.text = "Status:"
-        genderLabel.text = "Gender:"
+        avatarLabel.text = R.string.localization.avatar()
+        nameLabel.text = R.string.localization.name()
+        speciesLabel.text = R.string.localization.species()
+        statusLabel.text = R.string.localization.status()
+        genderLabel.text = R.string.localization.gender()
     }
     
     private func layoutViews() {
