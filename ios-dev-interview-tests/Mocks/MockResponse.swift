@@ -12,9 +12,9 @@ import Foundation
 enum MockResponse {
 
     static let characters: CharacterResponse = .init(results: [
-        Character(id: 1, name: "morty", status: "unknown", species: "human", image: nil, gender: "male"),
-        Character(id: 2, name: "Rick", status: "Alive", species: "human", image: nil, gender: "male")
+        Character(id: 1, name: "morty", status: "unknown", species: "human", image: nil, gender: .male),
+        Character(id: 2, name: "Rick", status: "Alive", species: "human", image: nil, gender: .male)
     ])
 
-    static let character = Character(id: 3, name: "Nick", status: "alive", species: "human", image: nil, gender: "female")
+    static let character = Character(id: 3, name: "Nick", status: "alive", species: "human", image: nil, gender: .female)
 }

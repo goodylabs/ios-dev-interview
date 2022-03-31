@@ -10,7 +10,6 @@
 		9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */; };
 		9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
 		9BFA84F31C776827009F64E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA84F21C776827009F64E4 /* LaunchScreen.storyboard */; };
-		A6BA090223A11D3E006B6509 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6BA090423A11D3E006B6509 /* Localization.strings */; };
 		C845ABC8869C9B405DF4252E /* Pods_ios_dev_interview_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D03274C9C9D0C6A820EABF /* Pods_ios_dev_interview_tests.framework */; };
 		CF02837E252F31FA008BCDF5 /* CharactersRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02837D252F31FA008BCDF5 /* CharactersRoutes.swift */; };
 		CF028382252F323C008BCDF5 /* CharactersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF028381252F323C008BCDF5 /* CharactersListViewController.swift */; };
@@ -28,7 +27,6 @@
 		CFB3EE4924F55AF600BE1034 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3EE4824F55AF600BE1034 /* CharacterModel.swift */; };
 		CFB3EE5824F6FC0700BE1034 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3EE5724F6FC0700BE1034 /* BaseViewModel.swift */; };
 		CFF7533F25151D6100FBBAFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA84F21C776827009F64E4 /* LaunchScreen.storyboard */; };
-		CFF7535825151E2D00FBBAFD /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6BA090423A11D3E006B6509 /* Localization.strings */; };
 		CFF7535925151E3200FBBAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
 		E72D153527F4AF3900B0C9C8 /* CharactersListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D153427F4AF3900B0C9C8 /* CharactersListViewModelTest.swift */; };
 		E72D153727F4AFA000B0C9C8 /* CharacterDetailsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D153627F4AFA000B0C9C8 /* CharacterDetailsViewModelTest.swift */; };
@@ -75,8 +73,6 @@
 		9B0C726D1C738D3400BAF3B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B5AFADA1C7205EC002347D6 /* IOS DEV INTERVIEW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS DEV INTERVIEW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFA84F21C776827009F64E4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A6BA090323A11D3E006B6509 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
-		A6BA090523A11D53006B6509 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localization.strings; sourceTree = "<group>"; };
 		BEAEDEC61DD1D0E4CEADABFB /* Pods-ios-dev-interview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-dev-interview.debug.xcconfig"; path = "Target Support Files/Pods-ios-dev-interview/Pods-ios-dev-interview.debug.xcconfig"; sourceTree = "<group>"; };
 		C29AEFC9DD4FE975902CF11A /* Pods-ios-dev-interview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-dev-interview.release.xcconfig"; path = "Target Support Files/Pods-ios-dev-interview/Pods-ios-dev-interview.release.xcconfig"; sourceTree = "<group>"; };
 		CF02837D252F31FA008BCDF5 /* CharactersRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRoutes.swift; sourceTree = "<group>"; };
@@ -148,7 +144,6 @@
 				FE4D635A22B2C74700685161 /* Navigators */,
 				CF0EDCC72361E58D000B6C4A /* Networking */,
 				E8290BFC1D832D6400599960 /* Extensions */,
-				9B8D306720AB45160050697F /* Resources */,
 				9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */,
 				C6D68AE52510D71300D9007E /* Unit */,
 				9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */,
@@ -176,14 +171,6 @@
 				CFDC3443236984AB0020331A /* ios-dev-interview-tests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		9B8D306720AB45160050697F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A6BA090423A11D3E006B6509 /* Localization.strings */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		C6D68AE52510D71300D9007E /* Unit */ = {
@@ -297,7 +284,7 @@
 		CFDC3444236984AB0020331A /* ios-dev-interview-tests */ = {
 			isa = PBXGroup;
 			children = (
-				E76C4FB527F4AE5E00EDBABA /* Tests */,
+				E76C4FB527F4AE5E00EDBABA /* View-Models-Tests */,
 				E7C610A327F367140078FCA4 /* Mocks */,
 				CFDC3447236984AB0020331A /* Info.plist */,
 			);
@@ -313,13 +300,13 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
-		E76C4FB527F4AE5E00EDBABA /* Tests */ = {
+		E76C4FB527F4AE5E00EDBABA /* View-Models-Tests */ = {
 			isa = PBXGroup;
 			children = (
 				E72D153427F4AF3900B0C9C8 /* CharactersListViewModelTest.swift */,
 				E72D153627F4AFA000B0C9C8 /* CharacterDetailsViewModelTest.swift */,
 			);
-			path = Tests;
+			path = "View-Models-Tests";
 			sourceTree = "<group>";
 		};
 		E7C610A327F367140078FCA4 /* Mocks */ = {
@@ -450,7 +437,6 @@
 				9BFA84F31C776827009F64E4 /* LaunchScreen.storyboard in Resources */,
 				CF80AAA22371C3EA0029B269 /* Roboto-Bold.ttf in Resources */,
 				CF80AAA32371C3EA0029B269 /* Roboto-Light.ttf in Resources */,
-				A6BA090223A11D3E006B6509 /* Localization.strings in Resources */,
 				9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,7 +446,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF7533F25151D6100FBBAFD /* LaunchScreen.storyboard in Resources */,
-				CFF7535825151E2D00FBBAFD /* Localization.strings in Resources */,
 				CFF7535925151E3200FBBAFD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,19 +630,6 @@
 			targetProxy = CFDC3448236984AB0020331A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A6BA090423A11D3E006B6509 /* Localization.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6BA090323A11D3E006B6509 /* en */,
-				A6BA090523A11D53006B6509 /* pl */,
-			);
-			name = Localization.strings;
-			path = "ios-dev-interview/Screens/Settings/SettingsMenu/Cells";
-			sourceTree = SOURCE_ROOT;
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9B5AFAEA1C7205EC002347D6 /* Debug */ = {

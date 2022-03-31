@@ -27,23 +27,21 @@ class CharactersListViewModel: BaseViewModel {
     }
 
     func pageBinding() {
-        page.subscribe(onNext: { [weak self] value in
-            guard let self = self else { return }
-            self.fetchCharacters(pageNumber: value)
+        let newCharacters = page.flatMapLatest { value in
+            self.service.getCharacters(page: value).catchError { err in
+                return Observable.error(err)
+            }
+        }
+
+        newCharacters.subscribe(onNext: { [unowned self] characters in
+            guard let characters = characters.results else { return }
+            self.characters.accept(self.characters.value + characters)
+        },onError: { [weak self] err in
+            self?.error.accept(err)
         }).disposed(by: disposeBag)
     }
 
-    func fetchCharacters(pageNumber: Int) {
-        self.service.getCharacters(page: pageNumber)
-            .subscribe(onNext: { [weak self] res in
-                guard let self = self else { return}
-                self.characters.accept(self.characters.value + (res.results ?? []))
-            }, onError: { [weak self] error in
-                self?.error.accept(error)
-            }).disposed(by: self.disposeBag)
-    }
-    
-    func navigateToDetails(_ characterId: Int?){
+    func navigateToDetails(_ characterId: Int?) {
         if let id = characterId {
             AppNavigator.shared.navigate(to: CharactersRoutes.details(id), with: .push)
         }
@@ -58,8 +56,8 @@ extension CharactersListViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView
             .dequeueReusableCell(withIdentifier: String(describing: CharacterCell.self), for: indexPath) as? CharacterCell
-            else {
-                return UITableViewCell()
+        else {
+            return UITableViewCell()
         }
 
         if characters.value.count <= indexPath.row {

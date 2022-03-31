@@ -34,6 +34,6 @@ final class CharacterServiceMocks: CharacterService {
     }
 }
 
-enum ServiceError: String, Error {
+enum ServiceError: String, Equatable, Error {
     case error = "service error"
 }

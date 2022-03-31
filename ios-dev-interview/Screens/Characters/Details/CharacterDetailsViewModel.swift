@@ -14,9 +14,9 @@ import RxRelay
 class CharacterDetailsViewModel {
 
     private let service: CharacterService
-    let characterToFetch = PublishSubject<Int>()
     let disposeBag = DisposeBag()
     let error = BehaviorRelay<Error?>(value: nil)
+    let characterToFetch = PublishSubject<Int>()
 
     let characterName = BehaviorRelay<String?>(value: nil)
     let characterSpecies = BehaviorRelay<String?>(value: nil)
@@ -29,51 +29,25 @@ class CharacterDetailsViewModel {
         self.performBindings()
     }
 
-    func performBindings() {
-        characterToFetch.subscribe(onNext: { [weak self] value in
-            guard let self = self else { return }
-            self.service.getCharacter(charactedID: value).subscribe(onNext: { character in
-                self.publishCharacter(character: character)
-            }, onError: { [weak self] error in
-                self?.error.accept(error)
-            }).disposed(by: self.disposeBag)
+    private func performBindings() {
+        let devicesfromApi = characterToFetch.flatMapLatest { [unowned self] value in
+            self.service.getCharacter(charactedID: value).catchError { err in
+                return Observable.error(err)
+            }
+        }.share()
+
+        devicesfromApi.subscribe(onNext: { [weak self] character in
+            self?.characterName.accept(character.name)
+            self?.characterGender.accept(character.gender)
+            self?.characterStatus.accept(character.status)
+            self?.characterSpecies.accept(character.species)
+            self?.characterImgUrl.accept(character.image)
+        },onError: { [weak self] err in
+            self?.error.accept(err)
         }).disposed(by: disposeBag)
     }
-
 }
 
-extension CharacterDetailsViewModel {
-    func publishCharacter(character: Character) {
-        if let name = character.name {
-            characterName.accept(name)
-        }
 
-        if let specie = character.species {
-            characterSpecies.accept(specie)
-        }
-        if let status = character.status {
-            characterStatus.accept(status)
-        }
-        if let gender = character.gender {
-            switch gender.lowercased() {
-            case "male":
-                characterGender.accept(.male)
-            case "female":
-                characterGender.accept(.female)
-            case "unknown":
-                characterGender.accept(.unknown)
-            default:
-                characterGender.accept(.unknown)
-            }
-        }
-        if let imgUrl = character.image {
-            characterImgUrl.accept(imgUrl)
-        }
-    }
-}
 
-enum GenderType {
-    case male
-    case female
-    case unknown
-}
+

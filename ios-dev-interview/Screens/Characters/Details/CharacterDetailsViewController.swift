@@ -63,6 +63,19 @@ class CharacterDetailsViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
 
+    func fetchingDataAlert(errMessage: String?) {
+        guard let errMessage = errMessage else { return }
+        let alert = UIAlertController(title: errMessage, message: "", preferredStyle: .actionSheet)
+        self.present(alert, animated: true, completion: {
+            alert.view.superview?.subviews[1].isUserInteractionEnabled = true
+            alert.view.superview?.subviews[1].addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+        })
+    }
+
+    @objc func alertControllerBackgroundTapped() {
+        self.dismiss(animated: true)
+    }
+
     func setupLayout() {
         self.title = "Details"
         self.view.backgroundColor = .white
@@ -168,18 +181,4 @@ class CharacterDetailsViewController: UIViewController {
         statusText.adjustsFontForContentSizeCategory = true
         genderLabel.adjustsFontForContentSizeCategory = true
     }
-
-    func fetchingDataAlert(errMessage: String?) {
-        guard let errMessage = errMessage else { return }
-        let alert = UIAlertController(title: errMessage, message: "", preferredStyle: .actionSheet)
-        self.present(alert, animated: true, completion: {
-            alert.view.superview?.subviews[1].isUserInteractionEnabled = true
-            alert.view.superview?.subviews[1].addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
-        })
-    }
-
-    @objc func alertControllerBackgroundTapped() {
-        self.dismiss(animated: true)
-    }
-
 }

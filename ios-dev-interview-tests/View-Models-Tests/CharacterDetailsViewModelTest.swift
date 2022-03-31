@@ -48,12 +48,11 @@ class CharacterDetailsViewModelTests: XCTestCase {
         XCTAssertTrue(service.didRequest)
     }
 
-
-
-
     override func tearDown() {
         viewModel = nil
         disposeBag = nil
+        scheduler = nil
+        service = nil
     }
 }
 

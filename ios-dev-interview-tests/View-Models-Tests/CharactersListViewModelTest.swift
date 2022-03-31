@@ -24,6 +24,7 @@ class CharactersListViewModelTests: XCTestCase {
         service = CharacterServiceMocks()
         viewModel = CharactersListViewModel(service: service)
         disposeBag = DisposeBag()
+        scheduler = .init(initialClock: 0)
     }
 
     func test_get_characters_successful() {
@@ -46,33 +47,32 @@ class CharactersListViewModelTests: XCTestCase {
     }
 
     func test_get_characters_successful_RxTest() {
-        scheduler = .init(initialClock: 0)
-        let observable = scheduler.createHotObservable([Recorded.next(100, ()), Recorded.next(200, ())])
-       // viewModel.characters.bind(to: observable).disposed(by: disposeBag)
+        service.isSuccessful = true
+        let observer = scheduler.createObserver([Character]?.self)
+        viewModel.characters.bind(to: observer).disposed(by: disposeBag)
+        simulateScrolling(times: 100, 200)
+        scheduler.start()
+        XCTAssertEqual(observer.events, [
+            Recorded.next(0, []),
+            Recorded.next(100, MockResponse.characters.results),
+            Recorded.next(200, MockResponse.characters.results! + MockResponse.characters.results!),
+        ])
     }
 
-//    func test_get_characters_successful_RxTest() {
-//        service.isSuccessful = true
-//        let observer = scheduler.createObserver([Character]?.self)
-//        viewModel.characters.bind(to: observer).disposed(by: disposeBag)
-//        simulateScrolling(times: 100, 200)
-//        scheduler.start()
-//        XCTAssertEqual(observer.events, [
-//            Recorded.next(0, []),
-//            Recorded.next(100, MockResponse.characters.results),
-//            Recorded.next(200, MockResponse.characters.results),
-//
-//        ])
-//    }
-//
-//    func simulateScrolling(times: Int...) {
-//        let events: [Recorded<Event<Int>>] = times.map { Recorded.next($0, 1) }
-//        print("test:",events)
-//        let scrolled = scheduler.createColdObservable(events)
-//        print("test2:", scrolled.recordedEvents)
-//        scrolled.bind(to: viewModel.page).disposed(by: disposeBag)
-//
-//    }
+    func test_get_characters_fail_RxSwift() {
+        service.isSuccessful = false
+        let observer = scheduler.createObserver(Error?.self)
+        viewModel.error.bind(to: observer).disposed(by: disposeBag)
+        simulateScrolling(times: 100, 200)
+        scheduler.start()
+        XCTAssertNotNil(viewModel.error.value)
+    }
+
+    func simulateScrolling(times: Int...) {
+        let events: [Recorded<Event<Int>>] = times.map { Recorded.next($0, 1) }
+        let scrolled = scheduler.createColdObservable(events)
+        scrolled.bind(to: viewModel.page).disposed(by: disposeBag)
+    }
 
     override func tearDown() {
         viewModel = nil
