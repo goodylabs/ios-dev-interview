@@ -13,7 +13,7 @@ import RxCocoa
 class CharactersListViewController: UIViewController {
     
     var viewModel: CharactersListViewModel!
-
+    
     let disposeBag = DisposeBag()
     let charactersTableView: UITableView = UITableView()
     
@@ -26,13 +26,13 @@ class CharactersListViewController: UIViewController {
     
     private func bindToViewModel() {
         viewModel.characters
-            .subscribe(onNext: { drinks in
+            .subscribe(onNext: { _ in
                 self.charactersTableView.reloadData()
             }).disposed(by: disposeBag)
     }
     
     func setupLayout() {
-        title = "Character List"
+        title = R.string.localization.characterList()
         //
         charactersTableView.register(CharacterCell.self, forCellReuseIdentifier: String(describing: CharacterCell.self))
         charactersTableView.translatesAutoresizingMaskIntoConstraints = false

@@ -6,3 +6,10 @@
   Copyright © 2019 Goodylabs. All rights reserved.
 */
 "skip" = "Pomiń";
+"character list" = "Lista charakterów";
+"character" = "Charakter";
+"avatar" = "Awatar:";
+"name" = "Nazwa:";
+"species" = "Gatunek:";
+"status" = "Status:";
+"gender" = "Płeć:";

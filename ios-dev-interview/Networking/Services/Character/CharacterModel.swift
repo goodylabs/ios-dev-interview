@@ -10,7 +10,19 @@ import Foundation
 
 
 struct CharacterResponse: Codable {
+    var info: CharactersInfo
     var results: [Character]?
+}
+
+enum CharacterGender: String, Codable {
+    case male = "Male"
+    case female = "Female"
+    case genderless = "Genderless"
+    case unknown
+}
+
+struct CharactersInfo: Codable {
+    var pages: Int
 }
 
 struct Character: Codable {
@@ -19,4 +31,5 @@ struct Character: Codable {
     var status: String?
     var species: String?
     var image: String?
+    var gender: CharacterGender?
 }
