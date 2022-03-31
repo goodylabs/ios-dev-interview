@@ -16,7 +16,7 @@ private extension CharacterGender {
         switch self {
         case .male: return R.image.maleGender()
         case .female: return R.image.femaleGender()
-        case .unknown: return nil
+        case .unknown, .genderless: return nil
         }
     }
 }
