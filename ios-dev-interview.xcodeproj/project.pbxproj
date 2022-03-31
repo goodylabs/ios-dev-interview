@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27F8B80A27F62C3E00BA5FCA /* CharacterResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8B80927F62C3E00BA5FCA /* CharacterResource.swift */; };
+		27F8B80C27F62C4400BA5FCA /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8B80B27F62C4400BA5FCA /* CharacterService.swift */; };
 		27FABEB727F233E4006806A7 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FABEB627F233E4006806A7 /* CharacterDetailsViewController.swift */; };
 		27FABEB927F23506006806A7 /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FABEB827F23506006806A7 /* CharacterDetailsViewModel.swift */; };
 		9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */; };
@@ -34,9 +36,6 @@
 		CF80AAA22371C3EA0029B269 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF80AA9F2371C3E90029B269 /* Roboto-Bold.ttf */; };
 		CF80AAA32371C3EA0029B269 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF80AAA02371C3E90029B269 /* Roboto-Light.ttf */; };
 		CF92EF6B235C728B005B244A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF92EF6A235C728A005B244A /* R.generated.swift */; };
-		CFB3EE4324F55AAE00BE1034 /* GoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3EE4224F55AAE00BE1034 /* GoalsService.swift */; };
-		CFB3EE4424F55AAE00BE1034 /* GoalsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3EE4224F55AAE00BE1034 /* GoalsService.swift */; };
-		CFB3EE4624F55AE600BE1034 /* GoalsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3EE4524F55AE600BE1034 /* GoalsResource.swift */; };
 		CFB3EE4924F55AF600BE1034 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3EE4824F55AF600BE1034 /* CharacterModel.swift */; };
 		CFB3EE4A24F55AF600BE1034 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3EE4824F55AF600BE1034 /* CharacterModel.swift */; };
 		CFB3EE5824F6FC0700BE1034 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3EE5724F6FC0700BE1034 /* BaseViewModel.swift */; };
@@ -76,6 +75,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27F8B80927F62C3E00BA5FCA /* CharacterResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterResource.swift; sourceTree = "<group>"; };
+		27F8B80B27F62C4400BA5FCA /* CharacterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterService.swift; sourceTree = "<group>"; };
 		27FABEB627F233E4006806A7 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		27FABEB827F23506006806A7 /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
 		4C984022D8904A4E2309D5EC /* Pods-ios-dev-interview-tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-dev-interview-tests.debug.xcconfig"; path = "Target Support Files/Pods-ios-dev-interview-tests/Pods-ios-dev-interview-tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,8 +109,6 @@
 		CF80AA9F2371C3E90029B269 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		CF80AAA02371C3E90029B269 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		CF92EF6A235C728A005B244A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		CFB3EE4224F55AAE00BE1034 /* GoalsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsService.swift; sourceTree = "<group>"; };
-		CFB3EE4524F55AE600BE1034 /* GoalsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsResource.swift; sourceTree = "<group>"; };
 		CFB3EE4824F55AF600BE1034 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		CFB3EE5724F6FC0700BE1034 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		CFDC3443236984AB0020331A /* ios-dev-interview-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-dev-interview-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -326,8 +325,8 @@
 		CFB3EE4124F55A9C00BE1034 /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				CFB3EE4224F55AAE00BE1034 /* GoalsService.swift */,
-				CFB3EE4524F55AE600BE1034 /* GoalsResource.swift */,
+				27F8B80927F62C3E00BA5FCA /* CharacterResource.swift */,
+				27F8B80B27F62C4400BA5FCA /* CharacterService.swift */,
 				CFB3EE4824F55AF600BE1034 /* CharacterModel.swift */,
 			);
 			path = Character;
@@ -626,7 +625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB3EE4624F55AE600BE1034 /* GoalsResource.swift in Sources */,
+				27F8B80A27F62C3E00BA5FCA /* CharacterResource.swift in Sources */,
 				CF028384252F3252008BCDF5 /* CharactersListViewModel.swift in Sources */,
 				CF02837E252F31FA008BCDF5 /* CharactersRoutes.swift in Sources */,
 				FE4D636422B2CDF700685161 /* ViewModelState.swift in Sources */,
@@ -639,7 +638,7 @@
 				9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */,
 				FE4D635C22B2C75400685161 /* Navigator.swift in Sources */,
 				CF028387252F3B8C008BCDF5 /* CharacterCell.swift in Sources */,
-				CFB3EE4324F55AAE00BE1034 /* GoalsService.swift in Sources */,
+				27F8B80C27F62C4400BA5FCA /* CharacterService.swift in Sources */,
 				FE4D635E22B2CAFF00685161 /* AppNavigator.swift in Sources */,
 				CFB3EE5824F6FC0700BE1034 /* BaseViewModel.swift in Sources */,
 				27FABEB927F23506006806A7 /* CharacterDetailsViewModel.swift in Sources */,
@@ -660,7 +659,6 @@
 				A6D27A29240E9C1000A8D88F /* KIFExtensions.swift in Sources */,
 				C6D68AEB2510E26200D9007E /* ApiService.swift in Sources */,
 				CFF7533D2514FF7900FBBAFD /* TargetType+Base.swift in Sources */,
-				CFB3EE4424F55AAE00BE1034 /* GoalsService.swift in Sources */,
 				CFB3EE4A24F55AF600BE1034 /* CharacterModel.swift in Sources */,
 				C6D68A972510C1AE00D9007E /* AppNavigator.swift in Sources */,
 				C6A0BFAA2510EF7F005968D4 /* BundleService.swift in Sources */,
