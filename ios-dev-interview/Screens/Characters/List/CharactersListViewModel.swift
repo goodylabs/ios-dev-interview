@@ -36,16 +36,16 @@ class CharactersListViewModel: BaseViewModel {
     }
 }
 
-extension CharactersListViewModel: UITableViewDataSource {
+extension CharactersListViewModel: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return characters.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView
-            .dequeueReusableCell(withIdentifier: String(describing: CharacterCell.self), for: indexPath) as? CharacterCell
-            else {
-                return UITableViewCell()
+                .dequeueReusableCell(withIdentifier: String(describing: CharacterCell.self), for: indexPath) as? CharacterCell
+        else {
+            return UITableViewCell()
         }
         
         if characters.value.count <= indexPath.row {
@@ -62,10 +62,7 @@ extension CharactersListViewModel: UITableViewDataSource {
         
         return cell
     }
-    
 }
 
-extension CharactersListViewModel: UITableViewDelegate {
-    
-}
+
 

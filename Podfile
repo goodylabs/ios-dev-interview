@@ -14,6 +14,7 @@ target 'ios-dev-interview' do
   pod 'SwifterSwift'
   pod 'UICircularProgressRing'
   pod 'Localize-Swift', '~> 2.0'
+  pod 'SnapKit', '~> 5.0.0'
 
   target 'ios-dev-interview-tests' do
       inherit! :search_paths
